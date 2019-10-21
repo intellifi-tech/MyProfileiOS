@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" customClass="EtkinlikCustomCardView" id="cxk-wN-pdQ" rowHeight="260" reuseIdentifier="EtkinlikCustomCardView">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="259"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1395" translatesAutoresizingMaskIntoConstraints="NO" image="Images/male_avatar.png">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint id="3022" firstAttribute="height" constant="50"/>
+                            <constraint id="3226" firstAttribute="width" constant="50"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3430" translatesAutoresizingMaskIntoConstraints="NO" text="Lorem Impus">
+                        <rect key="frame" x="66" y="12" width="344" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3837" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="66" y="33" width="336" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" colorSpace="calibratedRGB" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1"/>
+                        <nil key="highlightedColor"/>
+                        <constraints>
+                            <constraint id="11761" firstAttribute="height" constant="21"/>
+                        </constraints>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="16273" translatesAutoresizingMaskIntoConstraints="NO" image="Images/fuar_halk.jpg">
+                        <rect key="frame" x="8" y="62" width="402" height="163"/>
+                        <constraints>
+                            <constraint id="17901" firstAttribute="height" constant="163"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="53697" translatesAutoresizingMaskIntoConstraints="NO" image="Images/gradientimg2.png">
+                        <rect key="frame" x="8" y="160" width="402" height="65"/>
+                        <constraints>
+                            <constraint id="56372" firstAttribute="height" constant="65"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="57861" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="8" y="160" width="134" height="65"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="58394" translatesAutoresizingMaskIntoConstraints="NO" image="Images/users.png">
+                                <rect key="frame" x="8" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint id="58846" firstAttribute="height" constant="25"/>
+                                    <constraint id="58847" firstAttribute="width" constant="25"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.7k" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="58845" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="38" y="22" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="58854" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="58344" firstAttribute="height" constant="65"/>
+                            <constraint id="58848" firstItem="58394" firstAttribute="leading" secondItem="57861" secondAttribute="leading" constant="8"/>
+                            <constraint id="58849" firstItem="58394" firstAttribute="top" secondItem="57861" secondAttribute="top" constant="20"/>
+                            <constraint id="58851" firstItem="58845" firstAttribute="leading" secondItem="58394" secondAttribute="trailing" constant="5"/>
+                            <constraint id="58852" firstItem="58845" firstAttribute="trailing" secondItem="57861" secondAttribute="trailing"/>
+                            <constraint id="58853" firstAttribute="bottom" secondItem="58845" secondAttribute="bottom" constant="22"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="58342" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="142" y="160" width="134" height="65"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="58858" translatesAutoresizingMaskIntoConstraints="NO" image="Images/checkgiris.png">
+                                <rect key="frame" x="8" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint id="58859" firstAttribute="height" constant="25"/>
+                                    <constraint id="58860" firstAttribute="width" constant="25"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="58861" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="38" y="22" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="58862" firstAttribute="height" constant="21"/>
+                                    <constraint id="58869" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="58351" firstAttribute="height" constant="65"/>
+                            <constraint id="58866" firstItem="58858" firstAttribute="leading" secondItem="58342" secondAttribute="leading" constant="8"/>
+                            <constraint id="58867" firstItem="58858" firstAttribute="top" secondItem="58342" secondAttribute="top" constant="20"/>
+                            <constraint id="58868" firstItem="58861" firstAttribute="leading" secondItem="58858" secondAttribute="trailing" constant="5"/>
+                            <constraint id="58870" firstItem="58861" firstAttribute="trailing" secondItem="58342" secondAttribute="trailing"/>
+                            <constraint id="58871" firstAttribute="bottom" secondItem="58861" secondAttribute="bottom" constant="22"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="58343" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="276" y="160" width="134" height="65"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="58880" translatesAutoresizingMaskIntoConstraints="NO" image="Images/checkgiris.png">
+                                <rect key="frame" x="8" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint id="58881" firstAttribute="height" constant="25"/>
+                                    <constraint id="58882" firstAttribute="width" constant="25"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="58883" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="38" y="22" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="58884" firstAttribute="height" constant="21"/>
+                                    <constraint id="58885" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="58355" firstAttribute="height" constant="65"/>
+                            <constraint id="58886" firstItem="58880" firstAttribute="leading" secondItem="58343" secondAttribute="leading" constant="8"/>
+                            <constraint id="58887" firstItem="58880" firstAttribute="top" secondItem="58343" secondAttribute="top" constant="20"/>
+                            <constraint id="58888" firstItem="58883" firstAttribute="leading" secondItem="58880" secondAttribute="trailing" constant="5"/>
+                            <constraint id="58889" firstItem="58883" firstAttribute="top" secondItem="58343" secondAttribute="top" constant="22"/>
+                            <constraint id="58890" firstItem="58883" firstAttribute="trailing" secondItem="58343" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus Aciklama" lineBreakMode="wordWrap" id="59469" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="20" minimumFontSize="10">
+                        <rect key="frame" x="8" y="233" width="402" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                        <color key="textColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint id="2614" firstItem="1395" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8"/>
+                    <constraint id="2818" firstItem="1395" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="10334" firstItem="3430" firstAttribute="leading" secondItem="1395" secondAttribute="trailing" constant="8"/>
+                    <constraint id="10538" firstItem="3430" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="12"/>
+                    <constraint id="10945" firstAttribute="trailing" secondItem="3430" secondAttribute="trailing" constant="8"/>
+                    <constraint id="11149" firstItem="3837" firstAttribute="leading" secondItem="1395" secondAttribute="trailing" constant="8"/>
+                    <constraint id="11557" firstAttribute="trailing" secondItem="3837" secondAttribute="trailing" constant="16"/>
+                    <constraint id="13205" firstItem="3837" firstAttribute="top" secondItem="3430" secondAttribute="bottom"/>
+                    <constraint id="17289" firstItem="16273" firstAttribute="top" secondItem="1395" secondAttribute="bottom" constant="4"/>
+                    <constraint id="17493" firstItem="16273" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="17697" firstAttribute="trailing" secondItem="16273" secondAttribute="trailing" constant="8"/>
+                    <constraint id="55760" firstItem="53697" firstAttribute="trailing" secondItem="16273" secondAttribute="trailing"/>
+                    <constraint id="55964" firstItem="53697" firstAttribute="leading" secondItem="16273" secondAttribute="leading"/>
+                    <constraint id="56168" firstItem="53697" firstAttribute="bottom" secondItem="16273" secondAttribute="bottom"/>
+                    <constraint id="58345" firstItem="57861" firstAttribute="leading" secondItem="53697" secondAttribute="leading"/>
+                    <constraint id="58346" firstItem="57861" firstAttribute="top" secondItem="53697" secondAttribute="top"/>
+                    <constraint id="58347" firstItem="57861" firstAttribute="bottom" secondItem="53697" secondAttribute="bottom"/>
+                    <constraint id="58348" firstItem="58342" firstAttribute="leading" secondItem="57861" secondAttribute="trailing"/>
+                    <constraint id="58349" firstItem="58342" firstAttribute="bottom" secondItem="53697" secondAttribute="bottom"/>
+                    <constraint id="58350" firstItem="58342" firstAttribute="top" secondItem="53697" secondAttribute="top"/>
+                    <constraint id="58352" firstItem="58343" firstAttribute="leading" secondItem="58342" secondAttribute="trailing"/>
+                    <constraint id="58353" firstItem="58343" firstAttribute="bottom" secondItem="53697" secondAttribute="bottom"/>
+                    <constraint id="58354" firstItem="58343" firstAttribute="top" secondItem="53697" secondAttribute="top"/>
+                    <constraint id="58356" firstItem="58343" firstAttribute="trailing" secondItem="53697" secondAttribute="trailing"/>
+                    <constraint id="58357" firstItem="58342" firstAttribute="width" secondItem="57861" secondAttribute="width"/>
+                    <constraint id="58358" firstItem="58343" firstAttribute="width" secondItem="57861" secondAttribute="width"/>
+                    <constraint id="59602" firstItem="59469" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="59603" firstAttribute="trailing" secondItem="59469" secondAttribute="trailing" constant="8"/>
+                    <constraint id="59604" firstItem="59469" firstAttribute="top" secondItem="57861" secondAttribute="bottom" constant="8"/>
+                    <constraint id="59605" firstAttribute="bottom" secondItem="59469" secondAttribute="bottom" constant="5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-246" y="-135"/>
+            <connections>
+                <outlet property="EtkinlikFoto" destination="16273" id="name-outlet-16273"/>
+                <outlet property="KatilimciIcon" destination="58394" id="name-outlet-58394"/>
+                <outlet property="KatilimciText" destination="58845" id="name-outlet-58845"/>
+                <outlet property="GirisSaatiIcon" destination="58858" id="name-outlet-58858"/>
+                <outlet property="CikisSaatiIconn" destination="58880" id="name-outlet-58880"/>
+                <outlet property="CikisSaatiText" destination="58883" id="name-outlet-58883"/>
+                <outlet property="AciklamaLabel" destination="59469" id="name-outlet-59469"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Images/male_avatar.png" width="512" height="512"/>
+        <image name="Images/fuar_halk.jpg" width="637" height="359"/>
+        <image name="Images/gradientimg2.png" width="1024" height="250"/>
+        <image name="Images/users.png" width="48" height="48"/>
+        <image name="Images/checkgiris.png" width="291" height="405"/>
+    </resources>
+</document>

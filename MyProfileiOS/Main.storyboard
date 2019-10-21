@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SplashScreen" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/ic_launcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="220">
+                                <rect key="frame" x="95" y="220" width="130" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="226"/>
+                                    <constraint firstAttribute="width" constant="130" id="227"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="220" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="224"/>
+                            <constraint firstItem="220" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="225"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="-40"/>
+        </scene>
+        <!--Giriş Yap-->
+        <scene sceneID="242">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="243" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="240"/>
+                        <viewControllerLayoutGuide type="bottom" id="241"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="244">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2480">
+                                <rect key="frame" x="0.0" y="212.5" width="320" height="239"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2481">
+                                        <rect key="frame" x="16" y="8" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Posta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2482">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/mail.png" translatesAutoresizingMaskIntoConstraints="NO" id="2483">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2484"/>
+                                                    <constraint firstAttribute="width" constant="40" id="2485"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2486"/>
+                                            <constraint firstItem="2483" firstAttribute="leading" secondItem="2481" secondAttribute="leading" id="2487"/>
+                                            <constraint firstItem="2483" firstAttribute="top" secondItem="2481" secondAttribute="top" id="2488"/>
+                                            <constraint firstItem="2482" firstAttribute="leading" secondItem="2483" secondAttribute="trailing" constant="2" id="2489"/>
+                                            <constraint firstItem="2482" firstAttribute="top" secondItem="2481" secondAttribute="top" id="2490"/>
+                                            <constraint firstItem="2482" firstAttribute="bottom" secondItem="2481" secondAttribute="bottom" id="2491"/>
+                                            <constraint firstItem="2482" firstAttribute="trailing" secondItem="2481" secondAttribute="trailing" id="2492"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2493">
+                                        <rect key="frame" x="16" y="58" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2494">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="2495">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2496"/>
+                                                    <constraint firstAttribute="width" constant="40" id="2497"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2498"/>
+                                            <constraint firstItem="2495" firstAttribute="leading" secondItem="2493" secondAttribute="leading" id="2499"/>
+                                            <constraint firstItem="2495" firstAttribute="top" secondItem="2493" secondAttribute="top" id="2500"/>
+                                            <constraint firstItem="2494" firstAttribute="leading" secondItem="2495" secondAttribute="trailing" constant="2" id="2501"/>
+                                            <constraint firstItem="2494" firstAttribute="top" secondItem="2493" secondAttribute="top" id="2502"/>
+                                            <constraint firstItem="2494" firstAttribute="bottom" secondItem="2493" secondAttribute="bottom" id="2503"/>
+                                            <constraint firstItem="2494" firstAttribute="trailing" secondItem="2493" secondAttribute="trailing" id="2504"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2505">
+                                        <rect key="frame" x="16" y="127" width="288" height="45"/>
+                                        <color key="backgroundColor" red="0.18823529411764706" green="0.30980392156862746" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="2506"/>
+                                        </constraints>
+                                        <state key="normal" title="Giriş">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2507">
+                                        <rect key="frame" x="16" y="192" width="288" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="2508"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Hesabın yok mu? Kayıt Ol.">
+                                            <color key="titleColor" white="0.33333333333333298" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="884" kind="push" id="2986"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="2699"/>
+                                    <constraint firstItem="2481" firstAttribute="top" secondItem="2480" secondAttribute="top" constant="8" id="2705"/>
+                                    <constraint firstItem="2481" firstAttribute="leading" secondItem="2480" secondAttribute="leading" constant="16" id="2706"/>
+                                    <constraint firstAttribute="trailing" secondItem="2481" secondAttribute="trailing" constant="16" id="2707"/>
+                                    <constraint firstItem="2493" firstAttribute="leading" secondItem="2480" secondAttribute="leading" constant="16" id="2708"/>
+                                    <constraint firstAttribute="trailing" secondItem="2493" secondAttribute="trailing" constant="16" id="2709"/>
+                                    <constraint firstItem="2493" firstAttribute="top" secondItem="2481" secondAttribute="bottom" constant="10" id="2710"/>
+                                    <constraint firstItem="2505" firstAttribute="top" secondItem="2493" secondAttribute="bottom" constant="29" id="2711"/>
+                                    <constraint firstItem="2505" firstAttribute="leading" secondItem="2480" secondAttribute="leading" constant="16" id="2712"/>
+                                    <constraint firstAttribute="trailing" secondItem="2505" secondAttribute="trailing" constant="16" id="2713"/>
+                                    <constraint firstItem="2507" firstAttribute="top" secondItem="2505" secondAttribute="bottom" constant="20" id="2714"/>
+                                    <constraint firstItem="2507" firstAttribute="leading" secondItem="2480" secondAttribute="leading" constant="16" id="2715"/>
+                                    <constraint firstAttribute="trailing" secondItem="2507" secondAttribute="trailing" constant="16" id="2716"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/ic_launcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="2578">
+                                <rect key="frame" x="110" y="104" width="100" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2694"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2509">
+                                <rect key="frame" x="16" y="503" width="288" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2510"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Giriş yaparak sözleşmeleri kabul etmiş sayılırısınız.">
+                                    <color key="titleColor" white="0.33333333333333298" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2480" firstAttribute="centerX" secondItem="244" secondAttribute="centerX" id="2635"/>
+                            <constraint firstItem="2578" firstAttribute="top" secondItem="240" secondAttribute="bottom" constant="34" id="2640"/>
+                            <constraint firstItem="2480" firstAttribute="top" secondItem="2578" secondAttribute="bottom" constant="20" id="2641"/>
+                            <constraint firstItem="2578" firstAttribute="centerX" secondItem="244" secondAttribute="centerX" id="2643"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2480" secondAttribute="leading" constant="16" id="2697"/>
+                            <constraint firstItem="2480" firstAttribute="trailing" secondItem="244" secondAttribute="trailingMargin" constant="16" id="2698"/>
+                            <constraint firstItem="2480" firstAttribute="centerX" secondItem="244" secondAttribute="centerX" id="2700"/>
+                            <constraint firstItem="2480" firstAttribute="centerY" secondItem="244" secondAttribute="centerY" constant="48" id="2701"/>
+                            <constraint firstItem="241" firstAttribute="top" secondItem="2509" secondAttribute="bottom" constant="20" id="2702"/>
+                            <constraint firstItem="2509" firstAttribute="leading" secondItem="244" secondAttribute="leadingMargin" id="2703"/>
+                            <constraint firstItem="2509" firstAttribute="trailing" secondItem="244" secondAttribute="trailingMargin" id="2704"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Giriş Yap" id="356"/>
+                    <connections>
+                        <outlet property="EpostaHazne" destination="2481" id="name-outlet-2481"/>
+                        <outlet property="EpostaIcon" destination="2483" id="name-outlet-2483"/>
+                        <outlet property="EpostaText" destination="2482" id="name-outlet-2482"/>
+                        <outlet property="GirisButton" destination="2505" id="name-outlet-2505"/>
+                        <outlet property="SifreHazne" destination="2493" id="name-outlet-2493"/>
+                        <outlet property="SifreIcon" destination="2495" id="name-outlet-2495"/>
+                        <outlet property="SifreText" destination="2494" id="name-outlet-2494"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="245" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="-54"/>
+        </scene>
+        <!--Login Navigation View Controller-->
+        <scene sceneID="266">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="267" customClass="LoginNavigationViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="269">
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="243" kind="relationship" relationship="rootViewController" id="357"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="270" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="-53"/>
+        </scene>
+        <!--Kayit Ol View Controller-->
+        <scene sceneID="883">
+            <objects>
+                <viewController storyboardIdentifier="KayitOlViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="884" customClass="KayitOlViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="881"/>
+                        <viewControllerLayoutGuide type="bottom" id="882"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="885">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/ic_launcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="3367">
+                                <rect key="frame" x="110" y="104" width="100" height="89.5"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3368"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3428">
+                                <rect key="frame" x="0.0" y="200.5" width="320" height="323"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3773">
+                                        <rect key="frame" x="16" y="8" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3774">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/user.png" translatesAutoresizingMaskIntoConstraints="NO" id="3775">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3776"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3777"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3778"/>
+                                            <constraint firstItem="3775" firstAttribute="leading" secondItem="3773" secondAttribute="leading" id="3779"/>
+                                            <constraint firstItem="3775" firstAttribute="top" secondItem="3773" secondAttribute="top" id="3780"/>
+                                            <constraint firstItem="3774" firstAttribute="leading" secondItem="3775" secondAttribute="trailing" constant="2" id="3781"/>
+                                            <constraint firstItem="3774" firstAttribute="top" secondItem="3773" secondAttribute="top" id="3782"/>
+                                            <constraint firstItem="3774" firstAttribute="bottom" secondItem="3773" secondAttribute="bottom" id="3783"/>
+                                            <constraint firstItem="3774" firstAttribute="trailing" secondItem="3773" secondAttribute="trailing" id="3784"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3785">
+                                        <rect key="frame" x="16" y="56" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Soyad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3786">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/user.png" translatesAutoresizingMaskIntoConstraints="NO" id="3787">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3788"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3789"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3790"/>
+                                            <constraint firstItem="3787" firstAttribute="leading" secondItem="3785" secondAttribute="leading" id="3791"/>
+                                            <constraint firstItem="3787" firstAttribute="top" secondItem="3785" secondAttribute="top" id="3792"/>
+                                            <constraint firstItem="3786" firstAttribute="leading" secondItem="3787" secondAttribute="trailing" constant="2" id="3793"/>
+                                            <constraint firstItem="3786" firstAttribute="top" secondItem="3785" secondAttribute="top" id="3794"/>
+                                            <constraint firstItem="3786" firstAttribute="bottom" secondItem="3785" secondAttribute="bottom" id="3795"/>
+                                            <constraint firstItem="3786" firstAttribute="trailing" secondItem="3785" secondAttribute="trailing" id="3796"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3806">
+                                        <rect key="frame" x="16" y="104" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Posta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3807">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/mail.png" translatesAutoresizingMaskIntoConstraints="NO" id="3808">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3809"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3810"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3811"/>
+                                            <constraint firstItem="3808" firstAttribute="leading" secondItem="3806" secondAttribute="leading" id="3812"/>
+                                            <constraint firstItem="3808" firstAttribute="top" secondItem="3806" secondAttribute="top" id="3813"/>
+                                            <constraint firstItem="3807" firstAttribute="leading" secondItem="3808" secondAttribute="trailing" constant="2" id="3814"/>
+                                            <constraint firstItem="3807" firstAttribute="top" secondItem="3806" secondAttribute="top" id="3815"/>
+                                            <constraint firstItem="3807" firstAttribute="bottom" secondItem="3806" secondAttribute="bottom" id="3816"/>
+                                            <constraint firstItem="3807" firstAttribute="trailing" secondItem="3806" secondAttribute="trailing" id="3817"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3827">
+                                        <rect key="frame" x="16" y="152" width="288" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3828">
+                                                <rect key="frame" x="42" y="0.0" width="246" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="3829">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3830"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3831"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3832"/>
+                                            <constraint firstItem="3829" firstAttribute="leading" secondItem="3827" secondAttribute="leading" id="3833"/>
+                                            <constraint firstItem="3829" firstAttribute="top" secondItem="3827" secondAttribute="top" id="3834"/>
+                                            <constraint firstItem="3828" firstAttribute="leading" secondItem="3829" secondAttribute="trailing" constant="2" id="3835"/>
+                                            <constraint firstItem="3828" firstAttribute="top" secondItem="3827" secondAttribute="top" id="3836"/>
+                                            <constraint firstItem="3828" firstAttribute="bottom" secondItem="3827" secondAttribute="bottom" id="3837"/>
+                                            <constraint firstItem="3828" firstAttribute="trailing" secondItem="3827" secondAttribute="trailing" id="3838"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3849">
+                                        <rect key="frame" x="16" y="200" width="288" height="45"/>
+                                        <color key="backgroundColor" red="0.18823529411764706" green="0.30980392156862746" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="3850"/>
+                                        </constraints>
+                                        <state key="normal" title="Kayıt Ol">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="3963"/>
+                                    <constraint firstItem="3773" firstAttribute="top" secondItem="3428" secondAttribute="top" constant="8" id="3964"/>
+                                    <constraint firstItem="3773" firstAttribute="leading" secondItem="3428" secondAttribute="leading" constant="16" id="3965"/>
+                                    <constraint firstAttribute="trailing" secondItem="3773" secondAttribute="trailing" constant="16" id="3966"/>
+                                    <constraint firstItem="3785" firstAttribute="top" secondItem="3773" secondAttribute="bottom" constant="8" id="3967"/>
+                                    <constraint firstItem="3785" firstAttribute="leading" secondItem="3428" secondAttribute="leading" constant="16" id="3968"/>
+                                    <constraint firstAttribute="trailing" secondItem="3785" secondAttribute="trailing" constant="16" id="3969"/>
+                                    <constraint firstItem="3806" firstAttribute="leading" secondItem="3428" secondAttribute="leading" constant="16" id="3970"/>
+                                    <constraint firstAttribute="trailing" secondItem="3806" secondAttribute="trailing" constant="16" id="3971"/>
+                                    <constraint firstItem="3806" firstAttribute="top" secondItem="3785" secondAttribute="bottom" constant="8" id="3972"/>
+                                    <constraint firstItem="3827" firstAttribute="leading" secondItem="3428" secondAttribute="leading" constant="16" id="3973"/>
+                                    <constraint firstAttribute="trailing" secondItem="3827" secondAttribute="trailing" constant="16" id="3974"/>
+                                    <constraint firstItem="3827" firstAttribute="top" secondItem="3806" secondAttribute="bottom" constant="8" id="3975"/>
+                                    <constraint firstItem="3849" firstAttribute="top" secondItem="3827" secondAttribute="bottom" constant="8" id="3976"/>
+                                    <constraint firstItem="3849" firstAttribute="leading" secondItem="3428" secondAttribute="leading" constant="16" id="3977"/>
+                                    <constraint firstAttribute="trailing" secondItem="3849" secondAttribute="trailing" constant="16" id="3978"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3859">
+                                <rect key="frame" x="16" y="503" width="288" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3860"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Giriş yaparak sözleşmeleri kabul etmiş sayılırısınız.">
+                                    <color key="titleColor" white="0.33333333333333298" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3367" firstAttribute="top" secondItem="881" secondAttribute="bottom" constant="34" id="3369"/>
+                            <constraint firstItem="3367" firstAttribute="centerX" secondItem="885" secondAttribute="centerX" id="3370"/>
+                            <constraint firstItem="3428" firstAttribute="trailing" secondItem="885" secondAttribute="trailingMargin" constant="16" id="3959"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3428" secondAttribute="leading" constant="16" id="3960"/>
+                            <constraint firstItem="3428" firstAttribute="centerX" secondItem="885" secondAttribute="centerX" id="3961"/>
+                            <constraint firstItem="3428" firstAttribute="centerY" secondItem="885" secondAttribute="centerY" constant="78" id="3962"/>
+                            <constraint firstItem="3859" firstAttribute="trailing" secondItem="885" secondAttribute="trailingMargin" id="4102"/>
+                            <constraint firstItem="3859" firstAttribute="leading" secondItem="885" secondAttribute="leadingMargin" id="4103"/>
+                            <constraint firstItem="3428" firstAttribute="top" secondItem="3367" secondAttribute="bottom" constant="7" id="4348"/>
+                            <constraint firstItem="882" firstAttribute="top" secondItem="3859" secondAttribute="bottom" constant="20" id="11732"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AdHazne" destination="3773" id="name-outlet-3773"/>
+                        <outlet property="AdIcon" destination="3775" id="name-outlet-3775"/>
+                        <outlet property="AdText" destination="3774" id="name-outlet-3774"/>
+                        <outlet property="EmailHazne" destination="3806" id="name-outlet-3806"/>
+                        <outlet property="EmailIcon" destination="3808" id="name-outlet-3808"/>
+                        <outlet property="EmailText" destination="3807" id="name-outlet-3807"/>
+                        <outlet property="KayitButton" destination="3849" id="name-outlet-3849"/>
+                        <outlet property="SifreHazne" destination="3827" id="name-outlet-3827"/>
+                        <outlet property="SifreIcon" destination="3829" id="name-outlet-3829"/>
+                        <outlet property="SifreText" destination="3828" id="name-outlet-3828"/>
+                        <outlet property="SoyadHazne" destination="3785" id="name-outlet-3785"/>
+                        <outlet property="SoyadIcon" destination="3787" id="name-outlet-3787"/>
+                        <outlet property="SoyadText" destination="3786" id="name-outlet-3786"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="886" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="-58"/>
+        </scene>
+        <!--Mesajlar-->
+        <scene sceneID="13814">
+            <objects>
+                <viewController storyboardIdentifier="MesajlarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="13815" customClass="MesajlarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="13812"/>
+                        <viewControllerLayoutGuide type="bottom" id="13813"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13816">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesajlar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="150490">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="150491"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="150492">
+                                <rect key="frame" x="16" y="20" width="60" height="60"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="150493"/>
+                                    <constraint firstAttribute="width" constant="60" id="150494"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="150721">
+                                <rect key="frame" x="0.0" y="131" width="320" height="387"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Bir isim yazmayı deneyin..." translatesAutoresizingMaskIntoConstraints="NO" id="180028">
+                                <rect key="frame" x="0.0" y="87" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="180176"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="150492" firstAttribute="leading" secondItem="13816" secondAttribute="leadingMargin" id="150495"/>
+                            <constraint firstItem="150492" firstAttribute="top" secondItem="13812" secondAttribute="bottom" id="150496"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="150490" secondAttribute="leading" constant="16" id="150497"/>
+                            <constraint firstItem="150490" firstAttribute="trailing" secondItem="13816" secondAttribute="trailingMargin" constant="16" id="150498"/>
+                            <constraint firstItem="150490" firstAttribute="top" secondItem="13812" secondAttribute="bottom" constant="20" id="150499"/>
+                            <constraint firstItem="150721" firstAttribute="trailing" secondItem="13816" secondAttribute="trailingMargin" constant="16" id="150725"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="150721" secondAttribute="leading" constant="16" id="150726"/>
+                            <constraint firstItem="150721" firstAttribute="bottom" secondItem="13813" secondAttribute="top" id="150727"/>
+                            <constraint firstItem="180028" firstAttribute="top" secondItem="150492" secondAttribute="bottom" constant="7" id="180125"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="180028" secondAttribute="leading" constant="16" id="180142"/>
+                            <constraint firstItem="180028" firstAttribute="trailing" secondItem="13816" secondAttribute="trailingMargin" constant="16" id="180159"/>
+                            <constraint firstItem="150721" firstAttribute="top" secondItem="180028" secondAttribute="bottom" id="180193"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mesajlar" image="Images/message.png" id="14348"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MesajFriendsTableView" destination="150721" id="name-outlet-150721"/>
+                        <outlet property="ProfilFoto" destination="150492" id="name-outlet-150492"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13817" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="268"/>
+        </scene>
+        <!--Etkinlikler-->
+        <scene sceneID="14100">
+            <objects>
+                <viewController storyboardIdentifier="EtkinliklerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="14101" customClass="EtkinliklerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="14096"/>
+                        <viewControllerLayoutGuide type="bottom" id="14097"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14102">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="92137">
+                                <rect key="frame" x="16" y="20" width="60" height="60"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="92138"/>
+                                    <constraint firstAttribute="width" constant="60" id="92139"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etkinlikler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92140">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="92141"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="114360">
+                                <rect key="frame" x="0.0" y="88" width="320" height="430"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="147702">
+                                <rect key="frame" x="240" y="436" width="55" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="148565"/>
+                                    <constraint firstAttribute="width" constant="55" id="148567"/>
+                                </constraints>
+                                <state key="normal" image="Images/flash.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="92137" firstAttribute="top" secondItem="14096" secondAttribute="bottom" id="92142"/>
+                            <constraint firstItem="92137" firstAttribute="leading" secondItem="14102" secondAttribute="leadingMargin" id="92143"/>
+                            <constraint firstItem="92140" firstAttribute="top" secondItem="14096" secondAttribute="bottom" constant="20" id="92144"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="92140" secondAttribute="leading" constant="16" id="92145"/>
+                            <constraint firstItem="92140" firstAttribute="trailing" secondItem="14102" secondAttribute="trailingMargin" constant="16" id="92146"/>
+                            <constraint firstItem="114360" firstAttribute="top" secondItem="92137" secondAttribute="bottom" constant="8" id="114367"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="114360" secondAttribute="leading" constant="16" id="114368"/>
+                            <constraint firstItem="114360" firstAttribute="trailing" secondItem="14102" secondAttribute="trailingMargin" constant="16" id="114369"/>
+                            <constraint firstItem="114360" firstAttribute="bottom" secondItem="14097" secondAttribute="top" id="114370"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="147702" secondAttribute="trailing" constant="9" id="148568"/>
+                            <constraint firstItem="14097" firstAttribute="top" secondItem="147702" secondAttribute="bottom" constant="27" id="148569"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Etkinlikler" image="Images/flash.png" id="14103"/>
+                    <connections>
+                        <outlet property="KullaniciFoto" destination="92137" id="name-outlet-92137"/>
+                        <outlet property="PgerHazneee" destination="114360" id="name-outlet-114360"/>
+                        <outlet property="YeniEtkinlikOlusturButton" destination="147702" id="name-outlet-147702"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14104" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="-352"/>
+        </scene>
+        <!--Keşfet-->
+        <scene sceneID="14105">
+            <objects>
+                <viewController storyboardIdentifier="KesfetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="14106" customClass="KesfetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="14098"/>
+                        <viewControllerLayoutGuide type="bottom" id="14099"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14107">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keşfet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16257">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="16410"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="14355">
+                                <rect key="frame" x="16" y="20" width="60" height="60"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="14358"/>
+                                    <constraint firstAttribute="width" constant="60" id="14359"/>
+                                </constraints>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="14504">
+                                <rect key="frame" x="0.0" y="88" width="320" height="430"/>
+                            </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="250" minValue="1" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="18770">
+                                <rect key="frame" x="169" y="236" width="228" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="27493"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18771">
+                                <rect key="frame" x="262" y="104" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="18774"/>
+                                    <constraint firstAttribute="width" constant="42" id="18775"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62414">
+                                <rect key="frame" x="268" y="288" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="89076"/>
+                                    <constraint firstAttribute="height" constant="45" id="89077"/>
+                                </constraints>
+                                <state key="normal" image="Images/menu.png"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84748">
+                                <rect key="frame" x="0.0" y="336" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="85195"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91515">
+                                <rect key="frame" x="16" y="104" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="91516"/>
+                                    <constraint firstAttribute="height" constant="45" id="91517"/>
+                                </constraints>
+                                <state key="normal" image="Images/position.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="14355" firstAttribute="leading" secondItem="14107" secondAttribute="leadingMargin" id="14356"/>
+                            <constraint firstItem="14355" firstAttribute="top" secondItem="14098" secondAttribute="bottom" id="14357"/>
+                            <constraint firstItem="14504" firstAttribute="top" secondItem="14355" secondAttribute="bottom" constant="8" id="14505"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="14504" secondAttribute="leading" constant="16" id="14506"/>
+                            <constraint firstItem="14504" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="16" id="14507"/>
+                            <constraint firstItem="14504" firstAttribute="bottom" secondItem="14099" secondAttribute="top" id="14508"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="16257" secondAttribute="leading" constant="16" id="16407"/>
+                            <constraint firstItem="16257" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="16" id="16408"/>
+                            <constraint firstItem="16257" firstAttribute="top" secondItem="14098" secondAttribute="bottom" constant="20" id="16409"/>
+                            <constraint firstItem="18771" firstAttribute="top" secondItem="14504" secondAttribute="top" constant="16" id="18772"/>
+                            <constraint firstItem="18771" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" id="18773"/>
+                            <constraint firstItem="18770" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="91" id="27323"/>
+                            <constraint firstItem="18770" firstAttribute="top" secondItem="18771" secondAttribute="bottom" constant="111" id="32395"/>
+                            <constraint firstItem="14504" firstAttribute="bottom" secondItem="84748" secondAttribute="bottom" constant="2" id="85102"/>
+                            <constraint firstItem="84748" firstAttribute="trailing" secondItem="14504" secondAttribute="trailing" id="85133"/>
+                            <constraint firstItem="84748" firstAttribute="leading" secondItem="14504" secondAttribute="leading" id="85164"/>
+                            <constraint firstItem="84748" firstAttribute="top" secondItem="62414" secondAttribute="bottom" constant="3" id="89074"/>
+                            <constraint firstItem="62414" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="9" id="89075"/>
+                            <constraint firstItem="91515" firstAttribute="leading" secondItem="14504" secondAttribute="leading" constant="16" id="91520"/>
+                            <constraint firstItem="91515" firstAttribute="top" secondItem="14504" secondAttribute="top" constant="16" id="91521"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Keşfet" image="Images/public.png" id="14108"/>
+                    <connections>
+                        <outlet property="BenimLokasyonumButton" destination="91515" id="name-outlet-91515"/>
+                        <outlet property="GizleGosterButton" destination="62414" id="name-outlet-62414"/>
+                        <outlet property="KisilerScroll" destination="84748" id="name-outlet-84748"/>
+                        <outlet property="KullaniciFoto" destination="14355" id="name-outlet-14355"/>
+                        <outlet property="MapVieww" destination="14504" id="name-outlet-14504"/>
+                        <outlet property="SliderVieww" destination="18770" id="name-outlet-18770"/>
+                        <outlet property="UzaklikLabel" destination="18771" id="name-outlet-18771"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14109" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="-964"/>
+        </scene>
+        <!--Ana Main Tab Bar View Controller-->
+        <scene sceneID="14110">
+            <objects>
+                <tabBarController storyboardIdentifier="AnaMainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="14111" customClass="AnaMainTabBarViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="14114">
+                        <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="14106" kind="relationship" relationship="viewControllers" id="14112"/>
+                        <segue destination="14101" kind="relationship" relationship="viewControllers" id="14113"/>
+                        <segue destination="13815" kind="relationship" relationship="viewControllers" id="14349"/>
+                        <segue destination="14660" kind="relationship" relationship="viewControllers" id="14766"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14115" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="-57"/>
+        </scene>
+        <!--Profil-->
+        <scene sceneID="14659">
+            <objects>
+                <viewController storyboardIdentifier="ProfilViewKontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="14660" customClass="ProfilViewKontroller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="14657"/>
+                        <viewControllerLayoutGuide type="bottom" id="14658"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14661">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="181013">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="181014"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="181015">
+                                <rect key="frame" x="16" y="20" width="60" height="60"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="181016"/>
+                                    <constraint firstAttribute="width" constant="60" id="181017"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="205282">
+                                <rect key="frame" x="0.0" y="88" width="320" height="430"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="206791">
+                                <rect key="frame" x="274" y="35" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="207000"/>
+                                    <constraint firstAttribute="width" constant="30" id="207053"/>
+                                </constraints>
+                                <state key="normal" image="Images/user-add.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="181015" firstAttribute="leading" secondItem="14661" secondAttribute="leadingMargin" id="181018"/>
+                            <constraint firstItem="181015" firstAttribute="top" secondItem="14657" secondAttribute="bottom" id="181019"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="181013" secondAttribute="leading" constant="16" id="181020"/>
+                            <constraint firstItem="181013" firstAttribute="trailing" secondItem="14661" secondAttribute="trailingMargin" constant="16" id="181021"/>
+                            <constraint firstItem="181013" firstAttribute="top" secondItem="14657" secondAttribute="bottom" constant="20" id="181022"/>
+                            <constraint firstItem="205282" firstAttribute="top" secondItem="181015" secondAttribute="bottom" constant="8" id="205439"/>
+                            <constraint firstItem="205282" firstAttribute="trailing" secondItem="14661" secondAttribute="trailingMargin" constant="16" id="205492"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="205282" secondAttribute="leading" constant="16" id="205545"/>
+                            <constraint firstItem="205282" firstAttribute="bottom" secondItem="14658" secondAttribute="top" id="205598"/>
+                            <constraint firstItem="206791" firstAttribute="top" secondItem="14657" secondAttribute="bottom" constant="15" id="207106"/>
+                            <constraint firstItem="206791" firstAttribute="trailing" secondItem="14661" secondAttribute="trailingMargin" id="207159"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profil" image="Images/profilecircle.png" id="14765"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ProfilFotoHeader" destination="181015" id="name-outlet-181015"/>
+                        <outlet property="ProfilScroll" destination="205282" id="name-outlet-205282"/>
+                        <outlet property="TakipButton" destination="206791" id="name-outlet-206791"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14662" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="879"/>
+        </scene>
+        <!--Takip Ettiklerim Etkinlikler View Controller-->
+        <scene sceneID="93494">
+            <objects>
+                <viewController storyboardIdentifier="TakipEttiklerimEtkinliklerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="93495" customClass="TakipEttiklerimEtkinliklerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93492"/>
+                        <viewControllerLayoutGuide type="bottom" id="93493"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="93496">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95489">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="104036"/>
+                                </constraints>
+                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="118694">
+                                <rect key="frame" x="0.0" y="125" width="320" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="95489" secondAttribute="leading" constant="16" id="95490"/>
+                            <constraint firstItem="95489" firstAttribute="trailing" secondItem="93496" secondAttribute="trailingMargin" constant="16" id="95491"/>
+                            <constraint firstItem="95489" firstAttribute="top" secondItem="93496" secondAttribute="top" id="95492"/>
+                            <constraint firstItem="118694" firstAttribute="top" secondItem="95489" secondAttribute="bottom" id="118697"/>
+                            <constraint firstItem="118694" firstAttribute="trailing" secondItem="93496" secondAttribute="trailingMargin" constant="16" id="118698"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="118694" secondAttribute="leading" constant="16" id="118699"/>
+                            <constraint firstItem="118694" firstAttribute="bottom" secondItem="93496" secondAttribute="bottom" id="118700"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EtkinlikTableView" destination="118694" id="name-outlet-118694"/>
+                        <outlet property="HorizontalTakipKisiScroll" destination="95489" id="name-outlet-95489"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93497" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2051" y="-344"/>
+        </scene>
+        <!--Global Etkinlikler View Controller-->
+        <scene sceneID="93501">
+            <objects>
+                <viewController storyboardIdentifier="GlobalEtkinliklerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="93502" customClass="GlobalEtkinliklerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93499"/>
+                        <viewControllerLayoutGuide type="bottom" id="93500"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="93503">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="146227">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="146227" firstAttribute="top" secondItem="93503" secondAttribute="top" id="146230"/>
+                            <constraint firstItem="146227" firstAttribute="trailing" secondItem="93503" secondAttribute="trailingMargin" constant="16" id="146231"/>
+                            <constraint firstItem="146227" firstAttribute="bottom" secondItem="93503" secondAttribute="bottom" id="146232"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="146227" secondAttribute="leading" constant="16" id="146233"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GlobalTableView" destination="146227" id="name-outlet-146227"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93504" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386" y="-339"/>
+        </scene>
+        <!--Profil View Controller Sub Controller-->
+        <scene sceneID="208983">
+            <objects>
+                <viewController storyboardIdentifier="ProfilViewControllerSubController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="208984" customClass="ProfilViewControllerSubController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="208981"/>
+                        <viewControllerLayoutGuide type="bottom" id="208982"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="208985">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/cover_vector3.png" translatesAutoresizingMaskIntoConstraints="NO" id="210768">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="210769"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="210770">
+                                <rect key="frame" x="95" y="103.5" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="210771"/>
+                                    <constraint firstAttribute="height" constant="130" id="210772"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210773">
+                                <rect key="frame" x="0.0" y="241.5" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="210774"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210775">
+                                <rect key="frame" x="0.0" y="270.5" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="210776"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="210777">
+                                <rect key="frame" x="8" y="8" width="109" height="34"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="210778">
+                                        <rect key="frame" x="8" y="0.0" width="20" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="210779"/>
+                                            <constraint firstAttribute="height" constant="34" id="210780"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapak ekle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210781">
+                                        <rect key="frame" x="30" y="6" width="78" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="210782"/>
+                                            <constraint firstAttribute="height" constant="21" id="210783"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="210784">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="34"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="210778" firstAttribute="leading" secondItem="210777" secondAttribute="leading" constant="8" id="210785"/>
+                                    <constraint firstItem="210778" firstAttribute="top" secondItem="210777" secondAttribute="top" id="210786"/>
+                                    <constraint firstItem="210781" firstAttribute="leading" secondItem="210778" secondAttribute="trailing" constant="2" id="210787"/>
+                                    <constraint firstItem="210781" firstAttribute="top" secondItem="210777" secondAttribute="top" constant="6" id="210788"/>
+                                    <constraint firstItem="210784" firstAttribute="leading" secondItem="210777" secondAttribute="leading" id="210789"/>
+                                    <constraint firstItem="210784" firstAttribute="top" secondItem="210777" secondAttribute="top" id="210790"/>
+                                    <constraint firstItem="210784" firstAttribute="bottom" secondItem="210777" secondAttribute="bottom" id="210791"/>
+                                    <constraint firstItem="210784" firstAttribute="trailing" secondItem="210777" secondAttribute="trailing" id="210792"/>
+                                    <constraint firstAttribute="width" constant="109" id="210793"/>
+                                    <constraint firstAttribute="height" constant="34" id="210794"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="210795">
+                                <rect key="frame" x="218" y="8" width="93" height="34"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/user.png" translatesAutoresizingMaskIntoConstraints="NO" id="210796">
+                                        <rect key="frame" x="8" y="0.0" width="20" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="210797"/>
+                                            <constraint firstAttribute="height" constant="34" id="210798"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Düzenle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210799">
+                                        <rect key="frame" x="30" y="6" width="58" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="210800"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="210801">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="34"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="210802"/>
+                                    <constraint firstAttribute="height" constant="34" id="210803"/>
+                                    <constraint firstAttribute="trailing" secondItem="210799" secondAttribute="trailing" constant="5" id="210804"/>
+                                    <constraint firstItem="210796" firstAttribute="leading" secondItem="210795" secondAttribute="leading" constant="8" id="210805"/>
+                                    <constraint firstItem="210796" firstAttribute="top" secondItem="210795" secondAttribute="top" id="210806"/>
+                                    <constraint firstItem="210799" firstAttribute="leading" secondItem="210796" secondAttribute="trailing" constant="2" id="210807"/>
+                                    <constraint firstItem="210799" firstAttribute="top" secondItem="210795" secondAttribute="top" constant="6" id="210808"/>
+                                    <constraint firstItem="210801" firstAttribute="leading" secondItem="210795" secondAttribute="leading" id="210809"/>
+                                    <constraint firstItem="210801" firstAttribute="top" secondItem="210795" secondAttribute="top" id="210810"/>
+                                    <constraint firstItem="210801" firstAttribute="trailing" secondItem="210795" secondAttribute="trailing" id="210811"/>
+                                    <constraint firstItem="210801" firstAttribute="bottom" secondItem="210795" secondAttribute="bottom" id="210812"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="210813">
+                                <rect key="frame" x="190" y="198.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="210814"/>
+                                    <constraint firstAttribute="height" constant="35" id="210815"/>
+                                </constraints>
+                                <state key="normal" image="Images/pen.png"/>
+                            </button>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="235055">
+                                <rect key="frame" x="0.0" y="299.5" width="320" height="268.5"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="210768" secondAttribute="leading" constant="16" id="210925"/>
+                            <constraint firstItem="210768" firstAttribute="trailing" secondItem="208985" secondAttribute="trailingMargin" constant="16" id="211035"/>
+                            <constraint firstItem="210768" firstAttribute="top" secondItem="208985" secondAttribute="top" id="211145"/>
+                            <constraint firstItem="210770" firstAttribute="centerX" secondItem="208985" secondAttribute="centerX" id="211255"/>
+                            <constraint firstItem="210770" firstAttribute="centerY" secondItem="210768" secondAttribute="centerY" constant="83" id="211365"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="210773" secondAttribute="leading" constant="16" id="211475"/>
+                            <constraint firstItem="210773" firstAttribute="trailing" secondItem="208985" secondAttribute="trailingMargin" constant="16" id="211585"/>
+                            <constraint firstItem="210773" firstAttribute="top" secondItem="210770" secondAttribute="bottom" constant="8" id="211695"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="210775" secondAttribute="leading" constant="16" id="211805"/>
+                            <constraint firstItem="210775" firstAttribute="trailing" secondItem="208985" secondAttribute="trailingMargin" constant="16" id="211915"/>
+                            <constraint firstItem="210775" firstAttribute="top" secondItem="210773" secondAttribute="bottom" constant="8" id="212025"/>
+                            <constraint firstItem="210813" firstAttribute="trailing" secondItem="210770" secondAttribute="trailing" id="212135"/>
+                            <constraint firstItem="210813" firstAttribute="bottom" secondItem="210770" secondAttribute="bottom" id="212245"/>
+                            <constraint firstItem="210777" firstAttribute="top" secondItem="210768" secondAttribute="top" constant="8" id="213656"/>
+                            <constraint firstItem="210777" firstAttribute="leading" secondItem="210768" secondAttribute="leading" constant="8" id="213766"/>
+                            <constraint firstItem="210795" firstAttribute="top" secondItem="210768" secondAttribute="top" constant="8" id="213876"/>
+                            <constraint firstItem="210768" firstAttribute="trailing" secondItem="210795" secondAttribute="trailing" constant="9" id="213986"/>
+                            <constraint firstItem="235055" firstAttribute="top" secondItem="210775" secondAttribute="bottom" constant="8" id="235716"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="235055" secondAttribute="leading" constant="16" id="235826"/>
+                            <constraint firstItem="235055" firstAttribute="trailing" secondItem="208985" secondAttribute="trailingMargin" constant="16" id="235936"/>
+                            <constraint firstItem="235055" firstAttribute="bottom" secondItem="208985" secondAttribute="bottom" id="236046"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ContentViewww" destination="235055" id="name-outlet-235055"/>
+                        <outlet property="KapakEkleHazne" destination="210777" id="name-outlet-210777"/>
+                        <outlet property="KapakEkleIcon" destination="210778" id="name-outlet-210778"/>
+                        <outlet property="ProfilDuzenleHazne" destination="210795" id="name-outlet-210795"/>
+                        <outlet property="ProfilDuzenleIcon" destination="210796" id="name-outlet-210796"/>
+                        <outlet property="ProfilFotoDegistirButton" destination="210813" id="name-outlet-210813"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="208986" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="881"/>
+        </scene>
+        <!--Kisisel Bilgiler Tab Controller-->
+        <scene sceneID="238181">
+            <objects>
+                <viewController storyboardIdentifier="KisiselBilgilerTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="238182" customClass="KisiselBilgilerTabController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="238179"/>
+                        <viewControllerLayoutGuide type="bottom" id="238180"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="238183">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="242163">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="242163" firstAttribute="top" secondItem="238183" secondAttribute="top" id="242602"/>
+                            <constraint firstItem="242163" firstAttribute="trailing" secondItem="238183" secondAttribute="trailingMargin" constant="16" id="242712"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="242163" secondAttribute="leading" constant="16" id="242822"/>
+                            <constraint firstItem="242163" firstAttribute="bottom" secondItem="238183" secondAttribute="bottom" id="242932"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="KisiselBilgilerTableVieww" destination="242163" id="name-outlet-242163"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="238184" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2385" y="877"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/cover_vector3.png" width="595" height="235"/>
+        <image name="Images/flash.png" width="30" height="30"/>
+        <image name="Images/ic_launcher.png" width="192" height="192"/>
+        <image name="Images/lock.png" width="48" height="48"/>
+        <image name="Images/mail.png" width="48" height="48"/>
+        <image name="Images/male_avatar.png" width="512" height="512"/>
+        <image name="Images/me_photo.jpg" width="678" height="678"/>
+        <image name="Images/menu.png" width="48" height="48"/>
+        <image name="Images/message.png" width="30" height="30"/>
+        <image name="Images/pen.png" width="48" height="48"/>
+        <image name="Images/photo.png" width="48" height="48"/>
+        <image name="Images/position.png" width="48" height="48"/>
+        <image name="Images/profilecircle.png" width="30" height="30"/>
+        <image name="Images/public.png" width="30" height="30"/>
+        <image name="Images/user-add.png" width="48" height="48"/>
+        <image name="Images/user.png" width="48" height="48"/>
+    </resources>
+</document>
