@@ -18,11 +18,21 @@ namespace MyProfileiOS
         {
             base.ViewDidLoad();
             GirisButton.TouchUpInside += GirisButton_TouchUpInside;
+            EpostaText.Text = "mesut@intellifi.tech";
+            SifreText.Text = "1234qwer";
+            EpostaText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
+            SifreText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
         }
-
         private void GirisButton_TouchUpInside(object sender, EventArgs e)
         {
-            
             if (Bosmu())
             {
                 WebService webService = new WebService();
@@ -47,7 +57,6 @@ namespace MyProfileiOS
                 }
             }
         }
-
         bool Bosmu()
         {
             if (EpostaText.Text.Trim() == "")
@@ -70,9 +79,6 @@ namespace MyProfileiOS
                 return true;
             }
         }
-
-      
-
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
@@ -84,7 +90,6 @@ namespace MyProfileiOS
             GirisButton.ClipsToBounds = true;
             SifreText.SecureTextEntry = true;
         }
-
         void IconlariAyarla(UIImageView Iconn)
         {
             //Tint
@@ -97,7 +102,6 @@ namespace MyProfileiOS
             //Iconn.LayoutMargins =new UIEdgeInsets(10, 10, 10, 10);
 
         }
-
         void HazneleriAyarla(UIView Hazne)
         {
             Hazne.Layer.CornerRadius = 10f;

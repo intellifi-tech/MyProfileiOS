@@ -36,6 +36,35 @@ namespace MyProfileiOS
             KayitButton.Layer.CornerRadius = 15f;
             KayitButton.ClipsToBounds = true;
             KayitButton.TouchUpInside += KayitButton_TouchUpInside;
+
+
+            EmailText.Text = "mobil100@intellifi.tech";
+            SifreText.Text = "1234qwer";
+            AdText.Text = "Mobil101";
+            SoyadText.Text = "Soyad_Mobil101";
+
+            #region Keyboard Setting
+            EmailText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
+            SifreText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
+            AdText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
+            SoyadText.ShouldReturn += (textField) =>
+            {
+                textField.ResignFirstResponder();
+                return true;
+            };
+            #endregion
         }
 
         private void KayitButton_TouchUpInside(object sender, EventArgs e)
