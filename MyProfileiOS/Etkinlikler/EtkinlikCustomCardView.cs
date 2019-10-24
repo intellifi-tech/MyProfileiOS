@@ -40,11 +40,8 @@ namespace MyProfileiOS
             IconTint(KatilimciIcon);
             IconTint(GirisSaatiIcon);
             IconTint(CikisSaatiIconn);
-
-
-         
-
-            
+            UserPhoto.Layer.CornerRadius = UserPhoto.Frame.Height / 2;
+            UserPhoto.ClipsToBounds = true;
         }
 
         public void UpdateCell(UserAttendedEvent GelenModel1)
@@ -53,6 +50,13 @@ namespace MyProfileiOS
             UserTitleText.Text = "";
             GirisSaatiText.Text = "";
             CikisSaatiText.Text = "";
+            KatilimciText.Text = "";
+
+
+            if (GelenModel1.UserInfo == null)
+            {
+                GelenModel1.UserInfo = GelenModel1.user;
+            }
 
             var aaa = GelenModel1.UserInfo;
             if (!String.IsNullOrEmpty(GelenModel1.UserInfo.profile_photo))
@@ -111,13 +115,23 @@ namespace MyProfileiOS
                 var Donuss = webService.OkuGetir("event/" + EventID + "/show");
                 if (Donuss != null)
                 {
-
-                    var aaaa = Donuss.ToString();
-                    var Countt = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(aaaa).user_attended_event.Count;
-                    InvokeOnMainThread(delegate ()
+                    try
                     {
-                        KatilimciSayiText.Text = Countt.ToString();
-                    });
+                        var aaaa = Donuss.ToString();
+                        var Countt = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(aaaa).user_attended_event.Count;
+                        InvokeOnMainThread(delegate ()
+                        {
+                            KatilimciSayiText.Text = Countt.ToString();
+                        });
+                    }
+                    catch 
+                    {
+                        InvokeOnMainThread(delegate ()
+                        {
+                            KatilimciSayiText.Text = "-";
+                        }); ;
+                    }
+                   
 
                 }
 

@@ -1,5 +1,6 @@
 using CoreGraphics;
 using Foundation;
+using MyProfileiOS.DataBasee;
 using MyProfileiOS.WebServiceHelper;
 using Newtonsoft.Json;
 using System;
@@ -249,6 +250,8 @@ namespace MyProfileiOS
             [JsonProperty("event")]
             public Event Event { get; set; }
             public Following UserInfo { get; set; }
+            //Custom Propert 
+            public Following user { get; set; }//For Global List
         }
 
         public class TakipcilerRecyclerViewDataModel

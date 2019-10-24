@@ -35,11 +35,12 @@
                         <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/fuar_halk.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="16273">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="16273">
                         <rect key="frame" x="8" y="62" width="402" height="163"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="163" id="17901"/>
                         </constraints>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/gradientimg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="53697">
                         <rect key="frame" x="8" y="160" width="402" height="65"/>
@@ -197,7 +198,6 @@
     </objects>
     <resources>
         <image name="Images/checkgiris.png" width="291" height="405"/>
-        <image name="Images/fuar_halk.jpg" width="637" height="359"/>
         <image name="Images/gradientimg2.png" width="1024" height="250"/>
         <image name="Images/male_avatar.png" width="512" height="512"/>
         <image name="Images/users.png" width="48" height="48"/>
