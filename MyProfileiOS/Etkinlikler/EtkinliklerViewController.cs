@@ -1,4 +1,7 @@
+using FFImageLoading;
 using Foundation;
+using MyProfileiOS.DataBasee;
+using MyProfileiOS.WebServiceHelper;
 using Pager;
 using System;
 using UIKit;
@@ -53,6 +56,12 @@ namespace MyProfileiOS
             ButtonTasarimlariniAyarla(YeniEtkinlikOlusturButton);
         }
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            SetUserPhoto();
+        }
+
         void ButtonTasarimlariniAyarla(UIButton GelenButton)
         {
             GelenButton.Layer.CornerRadius = GelenButton.Bounds.Height / 2;
@@ -67,6 +76,23 @@ namespace MyProfileiOS
             GelenButton.Layer.ShadowOpacity = 1.0f;
             GelenButton.Layer.ShadowRadius = GelenButton.Bounds.Height / 2;
             GelenButton.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
+        }
+
+        void SetUserPhoto()
+        {
+            new System.Threading.Thread(new System.Threading.ThreadStart(delegate
+            {
+                var MeId = DataBase.USER_INFO_GETIR()[0].id;
+                WebService webService = new WebService();
+                var Donus = webService.OkuGetir("user/" + MeId + "/show");
+                if (Donus != null)
+                {
+                    InvokeOnMainThread(delegate () {
+                        var MemberInfo1 = Newtonsoft.Json.JsonConvert.DeserializeObject<USER_INFO>(Donus);
+                        ImageService.Instance.LoadUrl(MemberInfo1.profile_photo).Into(KullaniciFoto);
+                    });
+                }
+            })).Start();
         }
     }
 }

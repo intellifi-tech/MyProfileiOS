@@ -35,11 +35,27 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel GirisSaatiText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView KatilimciIcon { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel KatilimciText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel UserNameText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView UserPhoto { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel UserTitleText { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -68,6 +84,11 @@ namespace MyProfileiOS
                 GirisSaatiIcon = null;
             }
 
+            if (GirisSaatiText != null) {
+                GirisSaatiText.Dispose ();
+                GirisSaatiText = null;
+            }
+
             if (KatilimciIcon != null) {
                 KatilimciIcon.Dispose ();
                 KatilimciIcon = null;
@@ -76,6 +97,21 @@ namespace MyProfileiOS
             if (KatilimciText != null) {
                 KatilimciText.Dispose ();
                 KatilimciText = null;
+            }
+
+            if (UserNameText != null) {
+                UserNameText.Dispose ();
+                UserNameText = null;
+            }
+
+            if (UserPhoto != null) {
+                UserPhoto.Dispose ();
+                UserPhoto = null;
+            }
+
+            if (UserTitleText != null) {
+                UserTitleText.Dispose ();
+                UserTitleText = null;
             }
         }
     }

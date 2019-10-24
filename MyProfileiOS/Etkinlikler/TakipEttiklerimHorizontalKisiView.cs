@@ -1,3 +1,4 @@
+using FFImageLoading;
 using Foundation;
 using ObjCRuntime;
 using System;
@@ -8,17 +9,16 @@ namespace MyProfileiOS
 {
     public partial class TakipEttiklerimHorizontalKisiView : UIView
     {
+        Following Modell1;
         public TakipEttiklerimHorizontalKisiView (IntPtr handle) : base (handle)
         {
         }
 
-        public static TakipEttiklerimHorizontalKisiView Create(TakipEttigimmKisilerDataModel Modell, TakipEttiklerimEtkinliklerViewController KesfetViewController2)
+        public static TakipEttiklerimHorizontalKisiView Create(Following Modell, TakipEttiklerimEtkinliklerViewController KesfetViewController2)
         {
             var arr = NSBundle.MainBundle.LoadNib("TakipEttiklerimHorizontalKisiView", null, null);
             var v = Runtime.GetNSObject<TakipEttiklerimHorizontalKisiView>(arr.ValueAt(0));
-            //v.KesfetViewController1 = KesfetViewController2;
-            //v.GelenModel = Modell;
-            //  v.Duzenle();
+            v.Modell1 = Modell;
             return v;
         }
 
@@ -35,6 +35,20 @@ namespace MyProfileiOS
             //ArkaHazne.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
             ProfileFoto.ClipsToBounds = true;
             ProfileFoto.Layer.CornerRadius = ProfileFoto.Frame.Height / 2;
+            ProfileFoto.ClipsToBounds = true;
+            UserNametxt.Text = Modell1.name + " " + Modell1.surname;
+            GetUserImage(Modell1.profile_photo, ProfileFoto);
+
+        }
+        void GetUserImage(string pppath, UIImageView PPIMW)
+        {
+            new System.Threading.Thread(new System.Threading.ThreadStart(delegate
+            {
+                InvokeOnMainThread(delegate () {
+
+                    ImageService.Instance.LoadUrl(pppath).Into(PPIMW);
+                });
+            })).Start();
         }
     }
 }
