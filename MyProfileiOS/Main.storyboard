@@ -449,7 +449,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="150492">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="150492">
                                 <rect key="frame" x="16" y="20" width="60" height="60"/>
                                 <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -508,7 +508,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="92137">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="92137">
                                 <rect key="frame" x="16" y="20" width="60" height="60"/>
                                 <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -589,7 +589,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="14355">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="14355">
                                 <rect key="frame" x="16" y="20" width="60" height="60"/>
                                 <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -719,7 +719,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="181015">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="181015">
                                 <rect key="frame" x="16" y="20" width="60" height="60"/>
                                 <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1053,7 +1053,6 @@
         <image name="Images/lock.png" width="48" height="48"/>
         <image name="Images/mail.png" width="48" height="48"/>
         <image name="Images/male_avatar.png" width="512" height="512"/>
-        <image name="Images/me_photo.jpg" width="678" height="678"/>
         <image name="Images/menu.png" width="48" height="48"/>
         <image name="Images/message.png" width="30" height="30"/>
         <image name="Images/pen.png" width="48" height="48"/>

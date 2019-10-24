@@ -27,15 +27,6 @@ namespace MyProfileiOS
         {
         }
 
-       
-
-        
-        
-        
-
-     
-
-
         #region Yeni Hiyarsi
         
         #region Life
@@ -72,7 +63,23 @@ namespace MyProfileiOS
 
             GetMap(MapVieww);
             TakipEttiklerimiGetir();
+            SetUserPhoto();
+        }
 
+        void SetUserPhoto()
+        {
+            new System.Threading.Thread(new System.Threading.ThreadStart(delegate
+            {
+                WebService webService = new WebService();
+                var Donus = webService.OkuGetir("user/" + MeId + "/show");
+                if (Donus != null)
+                {
+                    InvokeOnMainThread(delegate () {
+                        var MemberInfo1 = Newtonsoft.Json.JsonConvert.DeserializeObject<USER_INFO>(Donus);
+                        ImageService.Instance.LoadUrl(MemberInfo1.profile_photo).Into(KullaniciFoto);
+                    });
+                }
+            })).Start();
         }
         #endregion
 
@@ -648,11 +655,7 @@ namespace MyProfileiOS
         }
         #endregion
 
-
-
-
         #endregion
-
 
         #region DataModels
 
