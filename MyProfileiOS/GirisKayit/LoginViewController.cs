@@ -1,4 +1,6 @@
+using CoreGraphics;
 using Foundation;
+using Google.Maps;
 using MyProfileiOS.DataBasee;
 using MyProfileiOS.GenericClass;
 using MyProfileiOS.WebServiceHelper;
@@ -107,6 +109,9 @@ namespace MyProfileiOS
             Hazne.Layer.CornerRadius = 10f;
             Hazne.ClipsToBounds = true;
         }
+
+
+      
 
         #region DtaaModels
         public class UserLogin

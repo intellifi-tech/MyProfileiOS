@@ -32,7 +32,7 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        MapKit.MKMapView MapVieww { get; set; }
+        UIKit.UIView MapVieww { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

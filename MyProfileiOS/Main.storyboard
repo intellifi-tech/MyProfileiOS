@@ -576,6 +576,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="244034" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="88" width="320" height="430"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keşfet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16257">
                                 <rect key="frame" x="0.0" y="40" width="320" height="21"/>
                                 <constraints>
@@ -593,9 +597,6 @@
                                     <constraint firstAttribute="width" constant="60" id="14359"/>
                                 </constraints>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="14504">
-                                <rect key="frame" x="0.0" y="88" width="320" height="430"/>
-                            </mapView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="250" minValue="1" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="18770">
                                 <rect key="frame" x="169" y="236" width="228" height="31"/>
                                 <constraints>
@@ -641,24 +642,25 @@
                         <constraints>
                             <constraint firstItem="14355" firstAttribute="leading" secondItem="14107" secondAttribute="leadingMargin" id="14356"/>
                             <constraint firstItem="14355" firstAttribute="top" secondItem="14098" secondAttribute="bottom" id="14357"/>
-                            <constraint firstItem="14504" firstAttribute="top" secondItem="14355" secondAttribute="bottom" constant="8" id="14505"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="14504" secondAttribute="leading" constant="16" id="14506"/>
-                            <constraint firstItem="14504" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="16" id="14507"/>
-                            <constraint firstItem="14504" firstAttribute="bottom" secondItem="14099" secondAttribute="top" id="14508"/>
                             <constraint firstAttribute="leadingMargin" secondItem="16257" secondAttribute="leading" constant="16" id="16407"/>
                             <constraint firstItem="16257" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="16" id="16408"/>
                             <constraint firstItem="16257" firstAttribute="top" secondItem="14098" secondAttribute="bottom" constant="20" id="16409"/>
-                            <constraint firstItem="18771" firstAttribute="top" secondItem="14504" secondAttribute="top" constant="16" id="18772"/>
                             <constraint firstItem="18771" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" id="18773"/>
                             <constraint firstItem="18770" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="91" id="27323"/>
                             <constraint firstItem="18770" firstAttribute="top" secondItem="18771" secondAttribute="bottom" constant="111" id="32395"/>
-                            <constraint firstItem="14504" firstAttribute="bottom" secondItem="84748" secondAttribute="bottom" constant="2" id="85102"/>
-                            <constraint firstItem="84748" firstAttribute="trailing" secondItem="14504" secondAttribute="trailing" id="85133"/>
-                            <constraint firstItem="84748" firstAttribute="leading" secondItem="14504" secondAttribute="leading" id="85164"/>
                             <constraint firstItem="84748" firstAttribute="top" secondItem="62414" secondAttribute="bottom" constant="3" id="89074"/>
                             <constraint firstItem="62414" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="9" id="89075"/>
-                            <constraint firstItem="91515" firstAttribute="leading" secondItem="14504" secondAttribute="leading" constant="16" id="91520"/>
-                            <constraint firstItem="91515" firstAttribute="top" secondItem="14504" secondAttribute="top" constant="16" id="91521"/>
+                            <constraint id="244035" firstItem="244034" firstAttribute="top" secondItem="14355" secondAttribute="bottom" constant="8"/>
+                            <constraint id="244036" firstItem="244034" firstAttribute="trailing" secondItem="14107" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="244037" firstAttribute="leadingMargin" secondItem="244034" secondAttribute="leading" constant="16"/>
+                            <constraint id="244038" firstItem="244034" firstAttribute="bottom" secondItem="14099" secondAttribute="top"/>
+                            <constraint id="244039" firstItem="91515" firstAttribute="leading" secondItem="244034" secondAttribute="leading" constant="16"/>
+                            <constraint id="244040" firstItem="91515" firstAttribute="top" secondItem="244034" secondAttribute="top" constant="16"/>
+                            <constraint id="244041" firstItem="18771" firstAttribute="top" secondItem="244034" secondAttribute="top" constant="16"/>
+                            <constraint id="244042" firstItem="244034" firstAttribute="trailing" secondItem="18771" secondAttribute="trailing" constant="16"/>
+                            <constraint id="244044" firstItem="84748" firstAttribute="trailing" secondItem="244034" secondAttribute="trailing"/>
+                            <constraint id="244045" firstItem="84748" firstAttribute="leading" secondItem="244034" secondAttribute="leading"/>
+                            <constraint id="244046" firstItem="244034" firstAttribute="bottom" secondItem="84748" secondAttribute="bottom" constant="2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Keşfet" image="Images/public.png" id="14108"/>
@@ -667,9 +669,9 @@
                         <outlet property="GizleGosterButton" destination="62414" id="name-outlet-62414"/>
                         <outlet property="KisilerScroll" destination="84748" id="name-outlet-84748"/>
                         <outlet property="KullaniciFoto" destination="14355" id="name-outlet-14355"/>
-                        <outlet property="MapVieww" destination="14504" id="name-outlet-14504"/>
                         <outlet property="SliderVieww" destination="18770" id="name-outlet-18770"/>
                         <outlet property="UzaklikLabel" destination="18771" id="name-outlet-18771"/>
+                        <outlet property="MapVieww" destination="244034" id="name-outlet-244034"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14109" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,13 +15,13 @@ namespace MyProfileiOS.GenericClass
         {
             var Genislik = UIScreen.MainScreen.Bounds.Width;
             var ToastView = new UIView();
-            ToastView.Frame = new CoreGraphics.CGRect(0, -100, Genislik - 0, 50f);
+            ToastView.Frame = new CoreGraphics.CGRect(20, -100, Genislik - 40, 50f);
             ToastView.BackgroundColor = GetToastColor(toastType);
-            //ToastView.Layer.CornerRadius = 10f;
-         
-            //ToastView.Layer.ShadowOpacity = 0.8f;
-            //ToastView.Layer.ShadowOffset = new CGSize(0, 0);
-            //ToastView.Layer.ShadowColor = UIColor.Black.CGColor;
+            ToastView.Layer.CornerRadius = 10f;
+
+            ToastView.Layer.ShadowOpacity = 0.8f;
+            ToastView.Layer.ShadowOffset = new CGSize(0, 0);
+            ToastView.Layer.ShadowColor = UIColor.Black.CGColor;
 
 
             var Logo = new UIImageView();
@@ -57,7 +57,7 @@ namespace MyProfileiOS.GenericClass
         {
             UIView.Animate(0.1, () => {
                 var framee = Toastt.Frame;
-                framee.Y = 0;
+                framee.Y = 50;
                 Toastt.Frame = framee;
             });
             HideToast(Toastt);

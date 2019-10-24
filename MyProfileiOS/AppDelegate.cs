@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Google.Maps;
 using System;
 using UIKit;
 
@@ -10,7 +11,7 @@ namespace MyProfileiOS
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
-
+        const string MapsApiKey = "AIzaSyD6F8c4Mf4a4lMLj_XLYvLKnBd_SP4_jVE";
         public override UIWindow Window
         {
             get;
@@ -70,7 +71,7 @@ namespace MyProfileiOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
-
+            MapServices.ProvideAPIKey(MapsApiKey);
             return true;
         }
 
