@@ -47,7 +47,7 @@
                                 <color key="titleColor" red="0.10196078431372549" green="0.13725490196078433" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/me_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="772">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="772">
                             <rect key="frame" x="178" y="38" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="773"/>
@@ -93,6 +93,6 @@
     </objects>
     <resources>
         <image name="Images/cover_vector3.png" width="595" height="235"/>
-        <image name="Images/me_photo.jpg" width="678" height="678"/>
+        <image name="Images/male_avatar.png" width="512" height="512"/>
     </resources>
 </document>

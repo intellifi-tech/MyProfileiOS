@@ -1,6 +1,8 @@
 using FFImageLoading;
 using Foundation;
+using MyProfileiOS.GenericClass;
 using MyProfileiOS.WebServiceHelper;
+using Newtonsoft.Json;
 using ObjCRuntime;
 using System;
 using System.Collections.Generic;
@@ -55,6 +57,93 @@ namespace MyProfileiOS
             {
                 TakipEtButton.SetTitle("Takip Et", UIControlState.Normal);
             }
+            TakipEtButton.TouchUpInside += TakipEtButton_TouchUpInside;
+        }
+
+        private void TakipEtButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var UserIdd = GelenModel.user.id;
+            var TakipListesi = KesfetViewController1.TakipEttiklerimListe;
+            var TakipEttiklerimArasindaVarmi = TakipListesi.FindAll(item => item.to_user_id == UserIdd);
+            if (TakipEttiklerimArasindaVarmi.Count <= 0)
+            {
+                UIAlertView alert = new UIAlertView();
+                alert.Title = "MyProfile";
+                alert.AddButton("Evet");
+                alert.AddButton("Hayýr");
+                alert.Message = GelenModel.user.name + " kullanýcýsýný takip etmek istediðinizden emin misiniz?";
+                alert.AlertViewStyle = UIAlertViewStyle.Default;
+                alert.Clicked += (object s, UIButtonEventArgs ev) =>
+                {
+                    if (ev.ButtonIndex == 0)
+                    {
+                        TakipEt(UserIdd);
+                        KesfetViewController1.TakipEttiklerimiGetir();
+                        alert.Dispose();
+                    }
+                    else
+                    {
+                        alert.Dispose();
+                    }
+                };
+                alert.Show();
+            }
+            else
+            {
+                UIAlertView alert = new UIAlertView();
+                alert.Title = "MyProfile";
+                alert.AddButton("Evet");
+                alert.AddButton("Hayýr");
+                alert.Message = GelenModel.user.name + " kullanýcýnýn takibini býrakmak istediðnizden emin misiniz?";
+                alert.AlertViewStyle = UIAlertViewStyle.Default;
+                alert.Clicked += (object s, UIButtonEventArgs ev) =>
+                {
+                    if (ev.ButtonIndex == 0)
+                    {
+                        TakibiBirak(UserIdd);
+                        KesfetViewController1.TakipEttiklerimiGetir();
+                        alert.Dispose();
+                    }
+                    else
+                    {
+                        alert.Dispose();
+                    }
+                };
+                alert.Show();
+            }
+        }
+        void TakipEt(int UserId)
+        {
+            TakipClass TakipClass1 = new TakipClass()
+            {
+                to_user_id = UserId
+            };
+            var jsonstring = JsonConvert.SerializeObject(TakipClass1);
+            WebService webService = new WebService();
+            var Donus = webService.ServisIslem("user/follow", jsonstring);
+            if (Donus != "Hata")
+            {
+                CustomToast.ShowToast(KesfetViewController1, "Takip edildi!", ToastType.Success);
+                TakipEtButton.SetTitle("Takip", UIControlState.Normal);
+                return;
+            }
+
+        }
+        void TakibiBirak(int UserId)
+        {
+            TakipClass TakipClass1 = new TakipClass()
+            {
+                to_user_id = UserId
+            };
+            var jsonstring = JsonConvert.SerializeObject(TakipClass1);
+            WebService webService = new WebService();
+            var Donus = webService.ServisIslem("user/stopFollowing", jsonstring);
+            if (Donus != "Hata")
+            {
+                CustomToast.ShowToast(KesfetViewController1, "Takip durduruldu.", ToastType.Warnig);
+                TakipEtButton.SetTitle("Takip Et", UIControlState.Normal);
+                return;
+            }
         }
 
         void GetUserImage(string pppath, string cppath,UIImageView PPIMW,UIImageView CPIMW)
@@ -63,11 +152,21 @@ namespace MyProfileiOS
             {
                 InvokeOnMainThread(delegate () {
 
-                    ImageService.Instance.LoadUrl(cppath).Into(CPIMW);
+                    if (!String.IsNullOrEmpty(cppath))
+                    {
+                        ImageService.Instance.LoadUrl(cppath).Into(CPIMW);
+                        CPIMW.ContentMode = UIViewContentMode.ScaleAspectFill;
+                        CPIMW.ClipsToBounds = true;
+                    }
 
                     ImageService.Instance.LoadUrl(pppath).Into(PPIMW);
                 });
             })).Start();
+        }
+
+        public class TakipClass
+        {
+            public int to_user_id { get; set; }
         }
     }
 }
