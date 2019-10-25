@@ -16,7 +16,7 @@ namespace MyProfileiOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView ProfilFotoHeader { get; set; }
+        UIKit.UIImageView KullaniciPhoto { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,9 +28,9 @@ namespace MyProfileiOS
 
         void ReleaseDesignerOutlets ()
         {
-            if (ProfilFotoHeader != null) {
-                ProfilFotoHeader.Dispose ();
-                ProfilFotoHeader = null;
+            if (KullaniciPhoto != null) {
+                KullaniciPhoto.Dispose ();
+                KullaniciPhoto = null;
             }
 
             if (ProfilScroll != null) {

@@ -757,7 +757,7 @@
                     <tabBarItem key="tabBarItem" title="Profil" image="Images/profilecircle.png" id="14765"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ProfilFotoHeader" destination="181015" id="name-outlet-181015"/>
+                        <outlet property="KullaniciPhoto" destination="181015" id="name-outlet-181015"/>
                         <outlet property="ProfilScroll" destination="205282" id="name-outlet-205282"/>
                         <outlet property="TakipButton" destination="206791" id="name-outlet-206791"/>
                     </connections>
@@ -1044,6 +1044,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="238184" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2385" y="877"/>
+        </scene>
+        <scene sceneID="245190">
+            <objects>
+                <viewController id="245191" sceneMemberID="viewController" customClass="KisiselBilgilerEtkinlikler" storyboardIdentifier="KisiselBilgilerEtkinlikler" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="245188"/>
+                        <viewControllerLayoutGuide type="bottom" id="245189"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="245192">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="245195">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="245196" firstAttribute="leadingMargin" secondItem="245195" secondAttribute="leading" constant="16"/>
+                            <constraint id="245197" firstItem="245195" firstAttribute="trailing" secondItem="245192" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="245198" firstItem="245195" firstAttribute="bottom" secondItem="245192" secondAttribute="bottom"/>
+                            <constraint id="245199" firstItem="245195" firstAttribute="top" secondItem="245192" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EtkinliklerTablo" destination="245195" id="name-outlet-245195"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="245193" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2727" y="880"/>
+        </scene>
+        <scene sceneID="248443">
+            <objects>
+                <viewController id="248444" sceneMemberID="viewController" customClass="KisiselBilgilerFotografGaleri" storyboardIdentifier="KisiselBilgilerFotografGaleri" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="248441"/>
+                        <viewControllerLayoutGuide type="bottom" id="248442"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="248445">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="248448" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="248450">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="248451" firstItem="248448" firstAttribute="top" secondItem="248445" secondAttribute="top"/>
+                            <constraint id="248452" firstItem="248448" firstAttribute="trailing" secondItem="248445" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="248453" firstAttribute="leadingMargin" secondItem="248448" secondAttribute="leading" constant="16"/>
+                            <constraint id="248454" firstItem="248448" firstAttribute="bottom" secondItem="248445" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CollView" destination="248448" id="name-outlet-248448"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="248446" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3058" y="880"/>
         </scene>
     </scenes>
     <resources>

@@ -30,15 +30,21 @@ namespace MyProfileiOS
             };
             var MainStoryBoard = UIStoryboard.FromName("Main", NSBundle.MainBundle);
             var KisiselBilgilerTabController1 = MainStoryBoard.InstantiateViewController("KisiselBilgilerTabController") as KisiselBilgilerTabController;
-            var KisiselBilgilerTabController2 = MainStoryBoard.InstantiateViewController("KisiselBilgilerTabController") as KisiselBilgilerTabController;
-
-            KisiselBilgilerTabController1.Title = "TAKÝP ETTÝKLERÝM";
-            KisiselBilgilerTabController2.Title = "GLOBAL";
+            var KisiselBilgilerTabController2 = MainStoryBoard.InstantiateViewController("KisiselBilgilerEtkinlikler") as KisiselBilgilerEtkinlikler;
+            var KisiselBilgilerTabController3 = MainStoryBoard.InstantiateViewController("KisiselBilgilerFotografGaleri") as KisiselBilgilerFotografGaleri;
+            
+            
+            //KisiselBilgilerFotografGaleri
+            KisiselBilgilerTabController1.Title = "HAKKINDA";
+            KisiselBilgilerTabController2.Title = "ETKÝNLÝKLER";
+            KisiselBilgilerTabController3.Title = "FOTOÐRAFLAR";
 
             UIViewController[] pages = new UIViewController[]
             {
                 KisiselBilgilerTabController1,
-                KisiselBilgilerTabController2
+                KisiselBilgilerTabController2,
+                KisiselBilgilerTabController3,
+
             };
 
             var pager = new PagerViewController(new PagerStyle(PagerStyle.Stretched) { SelectedStripColors = colors }, pages);

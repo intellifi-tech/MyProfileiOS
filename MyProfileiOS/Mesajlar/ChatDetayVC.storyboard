@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="792">
+    <device id="retina4_0" orientation="portrait"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="791">
+            <objects>
+                <viewController id="792" sceneMemberID="viewController" customClass="ChatDetayBase" storyboardIdentifier="ChatDetayBase" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="789"/>
+                        <viewControllerLayoutGuide type="bottom" id="790"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="793">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="796" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="801" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="804" firstAttribute="height" constant="30"/>
+                                            <constraint id="805" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="802" translatesAutoresizingMaskIntoConstraints="NO" image="Images/male_avatar.png">
+                                        <rect key="frame" x="262" y="4" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint id="809" firstAttribute="height" constant="50"/>
+                                            <constraint id="810" firstAttribute="width" constant="50"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="803" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="46" y="18" width="208" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="815" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="800" firstAttribute="height" constant="57"/>
+                                    <constraint id="806" firstItem="801" firstAttribute="leading" secondItem="796" secondAttribute="leading" constant="8"/>
+                                    <constraint id="807" firstItem="801" firstAttribute="top" secondItem="796" secondAttribute="top" constant="14"/>
+                                    <constraint id="808" firstItem="803" firstAttribute="leading" secondItem="801" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="811" firstAttribute="trailing" secondItem="802" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="812" firstItem="802" firstAttribute="top" secondItem="796" secondAttribute="top" constant="4"/>
+                                    <constraint id="813" firstItem="802" firstAttribute="leading" secondItem="803" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="814" firstItem="803" firstAttribute="top" secondItem="796" secondAttribute="top" constant="18"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="816" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="80" width="320" height="433"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="865" translatesAutoresizingMaskIntoConstraints="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" misplaced="YES">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="448"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="868" firstItem="865" firstAttribute="bottom" secondItem="816" secondAttribute="bottom"/>
+                                    <constraint id="871" firstItem="865" firstAttribute="top" secondItem="816" secondAttribute="top"/>
+                                    <constraint id="2300" firstAttribute="trailing" secondItem="865" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="2301" firstItem="865" firstAttribute="leading" secondItem="816" secondAttribute="leading" constant="8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="817" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="520" width="320" height="47"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="822" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Bir Mesaj Yaz">
+                                        <rect key="frame" x="8" y="6" width="266" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="826" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="282" y="8" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0.42352941176470588" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/send-2.png"/>
+                                        <constraints>
+                                            <constraint id="827" firstAttribute="height" constant="30"/>
+                                            <constraint id="828" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="823" firstAttribute="height" constant="47"/>
+                                    <constraint id="831" firstItem="822" firstAttribute="leading" secondItem="817" secondAttribute="leading" constant="8"/>
+                                    <constraint id="832" firstItem="822" firstAttribute="top" secondItem="817" secondAttribute="top" constant="6"/>
+                                    <constraint id="833" firstAttribute="bottom" secondItem="822" secondAttribute="bottom" constant="6"/>
+                                    <constraint id="834" firstAttribute="trailing" secondItem="826" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="835" firstItem="826" firstAttribute="top" secondItem="817" secondAttribute="top" constant="8"/>
+                                    <constraint id="836" firstItem="826" firstAttribute="leading" secondItem="822" secondAttribute="trailing" constant="8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="798" firstItem="796" firstAttribute="trailing" secondItem="793" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="799" firstAttribute="leadingMargin" secondItem="796" secondAttribute="leading" constant="16"/>
+                            <constraint id="818" firstAttribute="leadingMargin" secondItem="817" secondAttribute="leading" constant="16"/>
+                            <constraint id="820" firstItem="817" firstAttribute="trailing" secondItem="793" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="872" firstItem="816" firstAttribute="top" secondItem="796" secondAttribute="bottom" constant="8"/>
+                            <constraint id="873" firstItem="816" firstAttribute="trailing" secondItem="793" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="874" firstAttribute="leadingMargin" secondItem="816" secondAttribute="leading" constant="16"/>
+                            <constraint id="1443" firstItem="790" firstAttribute="top" secondItem="817" secondAttribute="bottom" constant="1"/>
+                            <constraint id="2299" firstItem="817" firstAttribute="top" secondItem="816" secondAttribute="bottom" constant="7"/>
+                            <constraint id="4013" firstItem="796" firstAttribute="top" secondItem="793" secondAttribute="top" constant="15"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="801" id="name-outlet-801"/>
+                        <outlet property="UserName" destination="803" id="name-outlet-803"/>
+                        <outlet property="UserImage" destination="802" id="name-outlet-802"/>
+                        <outlet property="MesajYazHazne" destination="817" id="name-outlet-817"/>
+                        <outlet property="MesajInput" destination="822" id="name-outlet-822"/>
+                        <outlet property="GonderButton" destination="826" id="name-outlet-826"/>
+                        <outlet property="MesajTablo" destination="865" id="name-outlet-865"/>
+                        <outlet property="BottomKisitlama" destination="1443" id="name-outlet-1443"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="794" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="-435"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/chevrons-left.png" width="48" height="48"/>
+        <image name="Images/send-2.png" width="48" height="48"/>
+        <image name="Images/male_avatar.png" width="512" height="512"/>
+    </resources>
+</document>

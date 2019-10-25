@@ -57,7 +57,7 @@ namespace MyProfileiOS
             {
                 GelenModel1.UserInfo = GelenModel1.user;
             }
-
+            
             var aaa = GelenModel1.UserInfo;
             if (!String.IsNullOrEmpty(GelenModel1.UserInfo.profile_photo))
                 ImageService.Instance.LoadUrl(GelenModel1.UserInfo.profile_photo).Into(UserPhoto);

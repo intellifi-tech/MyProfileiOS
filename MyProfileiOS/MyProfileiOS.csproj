@@ -152,6 +152,30 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleIncoming.imageset\bubble_regular.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleIncoming.imageset\bubble_regular@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleIncoming.imageset\bubble_regular@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleIncoming.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleOutgoing.imageset\bubble_regular.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleOutgoing.imageset\bubble_regular@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleOutgoing.imageset\bubble_regular@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\BubbleOutgoing.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\activity.png" />
@@ -168,6 +192,7 @@
     <InterfaceDefinition Include="Mesajlar\MesajlarKisiListItem.xib" />
     <InterfaceDefinition Include="Profil\KisiselBilgilerCustomView.xib" />
     <InterfaceDefinition Include="Profil\KisiselBilgilerCustomTableItem.xib" />
+    <InterfaceDefinition Include="Mesajlar\ChatDetayVC.storyboard" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Etkinlikler\TakipEttiklerimHorizontalKisiView.xib" />
     <InterfaceDefinition Include="Profil\ProfilHeaderView2.xib" />
@@ -176,6 +201,21 @@
     <Compile Include="AnaMain\AnaMainTabBarViewController.cs" />
     <Compile Include="AnaMain\AnaMainTabBarViewController.designer.cs">
       <DependentUpon>AnaMainTabBarViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\KisiselBilgilerFotografGaleri.cs" />
+    <Compile Include="Profil\KisiselBilgilerFotografGaleri.designer.cs">
+      <DependentUpon>KisiselBilgilerFotografGaleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\KisiselBilgilerEtkinlikler.cs" />
+    <Compile Include="Profil\KisiselBilgilerEtkinlikler.designer.cs">
+      <DependentUpon>KisiselBilgilerEtkinlikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesajlar\Cells\BubbleCell.cs" />
+    <Compile Include="Mesajlar\Cells\IncomingCell.cs" />
+    <Compile Include="Mesajlar\Cells\OutgoingCell.cs" />
+    <Compile Include="Mesajlar\ChatDetayBase.cs" />
+    <Compile Include="Mesajlar\ChatDetayBase.designer.cs">
+      <DependentUpon>ChatDetayBase.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBasee\DataBase.cs" />
     <Compile Include="DataBasee\DataModel.cs" />

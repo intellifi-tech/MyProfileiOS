@@ -1,5 +1,8 @@
 using CoreGraphics;
+using FFImageLoading;
 using Foundation;
+using MyProfileiOS.DataBasee;
+using MyProfileiOS.WebServiceHelper;
 using System;
 using UIKit;
 
@@ -7,19 +10,43 @@ namespace MyProfileiOS
 {
     public partial class ProfilViewKontroller : UIViewController
     {
+        public USER_INFO GelenUser;
         public ProfilViewKontroller (IntPtr handle) : base (handle)
         {
         }
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            ProfilFotoHeader.Layer.CornerRadius = ProfilFotoHeader.Frame.Height / 2;
-            ProfilFotoHeader.ClipsToBounds = true;
+            KullaniciPhoto.Layer.CornerRadius = KullaniciPhoto.Frame.Height / 2;
+            KullaniciPhoto.ClipsToBounds = true;
             ButtonTasarimlariniAyarla(TakipButton);
 
             GetProfilHeader();
         }
-        
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            GelenUser = DataBase.USER_INFO_GETIR()[0];
+            SecilenKullanici.UserID = GelenUser.id;
+            SetUserPhoto();
+        }
+
+        void SetUserPhoto()
+        {
+            new System.Threading.Thread(new System.Threading.ThreadStart(delegate
+            {
+                WebService webService = new WebService();
+                var Donus = webService.OkuGetir("user/" + SecilenKullanici.UserID + "/show");
+                if (Donus != null)
+                {
+                    InvokeOnMainThread(delegate () {
+                        var MemberInfo1 = Newtonsoft.Json.JsonConvert.DeserializeObject<USER_INFO>(Donus);
+                        ImageService.Instance.LoadUrl(MemberInfo1.profile_photo).Into(KullaniciPhoto);
+                    });
+                }
+            })).Start();
+        }
+
         void GetProfilHeader()
         {
             var MainStoryBoard = UIStoryboard.FromName("Main", NSBundle.MainBundle);
@@ -35,8 +62,6 @@ namespace MyProfileiOS
             ProfilScroll.ContentSize = new CGSize(UIScreen.MainScreen.Bounds.Width, 1000f);
             ProfilScroll.ShowsHorizontalScrollIndicator = false;
             ProfilScroll.ShowsVerticalScrollIndicator = false;
-            
-
         }
 
         void ButtonTasarimlariniAyarla(UIButton GelenButton)
@@ -54,5 +79,11 @@ namespace MyProfileiOS
             //GelenButton.Layer.ShadowRadius = GelenButton.Bounds.Height / 2;
             //GelenButton.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
         }
+    }
+
+
+    public static class SecilenKullanici
+    {
+        public static string UserID { get; set; }
     }
 }

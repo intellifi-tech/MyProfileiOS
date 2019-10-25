@@ -1,65 +1,85 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" customClass="MesajlarKisiListItem" id="cxk-wN-pdQ" rowHeight="84" reuseIdentifier="MesajlarKisiListItem">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MesajlarKisiListItem" rowHeight="84" id="cxk-wN-pdQ" customClass="MesajlarKisiListItem">
             <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="947" translatesAutoresizingMaskIntoConstraints="NO" image="Images/male_avatar.png">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/male_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="947">
                         <rect key="frame" x="8" y="8" width="65" height="65"/>
                         <constraints>
-                            <constraint id="11486" firstAttribute="width" constant="65"/>
-                            <constraint id="11791" firstAttribute="height" constant="65"/>
+                            <constraint firstAttribute="width" constant="65" id="11486"/>
+                            <constraint firstAttribute="height" constant="65" id="11791"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1733" translatesAutoresizingMaskIntoConstraints="NO" text="Lorem Impus">
-                        <rect key="frame" x="80" y="17" width="231" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1733">
+                        <rect key="frame" x="80" y="17" width="173" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus Title" textAlignment="natural" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" id="1734" translatesAutoresizingMaskIntoConstraints="NO">
-                        <rect key="frame" x="81" y="42" width="229" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus Title" textAlignment="natural" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1734">
+                        <rect key="frame" x="81" y="42" width="229" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" colorSpace="calibratedRGB" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1"/>
+                        <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <constraints>
-                            <constraint id="1735" firstAttribute="height" constant="21"/>
+                            <constraint id="15415" firstAttribute="height" constant="25"/>
                         </constraints>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4482" translatesAutoresizingMaskIntoConstraints="NO">
-                        <rect key="frame" x="271" y="8" width="40" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4482">
+                        <rect key="frame" x="261" y="8" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4483"/>
+                            <constraint firstAttribute="height" constant="21" id="10266"/>
+                            <constraint id="15442" firstAttribute="width" constant="50"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" colorSpace="calibratedRGB" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1"/>
+                        <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⬤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14674" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="287" y="30" width="22" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" colorSpace="calibratedRGB" red="0.984313725490196" green="0.00392156862745098" blue="0.00392156862745098" alpha="1"/>
                         <nil key="highlightedColor"/>
                         <constraints>
-                            <constraint id="4483" firstAttribute="height" constant="21"/>
-                            <constraint id="10266" firstAttribute="height" constant="21"/>
-                            <constraint id="10571" firstAttribute="width" constant="40"/>
+                            <constraint id="14676" firstAttribute="height" constant="21"/>
+                            <constraint id="14677" firstAttribute="width" constant="22"/>
                         </constraints>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint id="9656" firstItem="4482" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8"/>
-                    <constraint id="9961" firstAttribute="trailing" secondItem="4482" secondAttribute="trailing" constant="9"/>
-                    <constraint id="10876" firstItem="947" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
-                    <constraint id="11181" firstItem="947" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8"/>
-                    <constraint id="12400" firstItem="1733" firstAttribute="leading" secondItem="947" secondAttribute="trailing" constant="7"/>
-                    <constraint id="12705" firstAttribute="trailing" secondItem="1733" secondAttribute="trailing" constant="9"/>
-                    <constraint id="13010" firstItem="1733" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="17"/>
-                    <constraint id="13315" firstItem="1734" firstAttribute="leading" secondItem="947" secondAttribute="trailing" constant="8"/>
-                    <constraint id="13620" firstItem="1734" firstAttribute="top" secondItem="1733" secondAttribute="bottom" constant="4"/>
-                    <constraint id="13925" firstAttribute="trailing" secondItem="1734" secondAttribute="trailing" constant="10"/>
+                    <constraint firstItem="4482" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8" id="9656"/>
+                    <constraint firstAttribute="trailing" secondItem="4482" secondAttribute="trailing" constant="9" id="9961"/>
+                    <constraint firstItem="947" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="10876"/>
+                    <constraint firstItem="947" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8" id="11181"/>
+                    <constraint firstItem="1733" firstAttribute="leading" secondItem="947" secondAttribute="trailing" constant="7" id="12400"/>
+                    <constraint firstItem="1733" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="17" id="13010"/>
+                    <constraint firstItem="1734" firstAttribute="leading" secondItem="947" secondAttribute="trailing" constant="8" id="13315"/>
+                    <constraint firstItem="1734" firstAttribute="top" secondItem="1733" secondAttribute="bottom" constant="4" id="13620"/>
+                    <constraint firstAttribute="trailing" secondItem="1734" secondAttribute="trailing" constant="10" id="13925"/>
+                    <constraint id="14678" firstAttribute="trailing" secondItem="14674" secondAttribute="trailing" constant="11"/>
+                    <constraint id="14679" firstItem="14674" firstAttribute="top" secondItem="4482" secondAttribute="bottom" constant="1"/>
+                    <constraint id="15443" firstItem="4482" firstAttribute="leading" secondItem="1733" secondAttribute="trailing" constant="8"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="-224" y="-51"/>
+            <connections>
+                <outlet property="UserImage" destination="947" id="name-outlet-947"/>
+                <outlet property="UserName" destination="1733" id="name-outlet-1733"/>
+                <outlet property="LastMessage" destination="1734" id="name-outlet-1734"/>
+                <outlet property="Timee" destination="4482" id="name-outlet-4482"/>
+                <outlet property="Badgee" destination="14674" id="name-outlet-14674"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
