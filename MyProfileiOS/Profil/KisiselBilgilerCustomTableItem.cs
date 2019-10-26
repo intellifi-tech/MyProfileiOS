@@ -24,8 +24,11 @@ namespace MyProfileiOS
         {
             BaslikText.Text = GelenModel.Title;
             IcerikText.Text = GelenModel.Aciklama;
+
+
+
             //Tint
-            var IconImage = Iconn.Image.ImageWithAlignmentRectInsets(new UIEdgeInsets(-5, -5, -5, -5));
+            var IconImage = UIImage.FromBundle(GelenModel.IconPath).ImageWithAlignmentRectInsets(new UIEdgeInsets(-5, -5, -5, -5));
             var TintImage = IconImage.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             Iconn.Image = TintImage;
             Iconn.TintColor = UIColor.FromRGB(97, 97, 97);

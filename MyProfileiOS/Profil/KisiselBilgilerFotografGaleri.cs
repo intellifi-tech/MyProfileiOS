@@ -30,6 +30,7 @@ namespace MyProfileiOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+            CollView.ScrollEnabled = false;
         }
         void GaleriyiGetir()
         {
@@ -68,6 +69,8 @@ namespace MyProfileiOS
 
                 CollView.RegisterClassForCell(typeof(ShortCell), ShortCell.CellID);
                 CollView.Source = new DataSourcee(UserGallery1, this);
+                CollView.ReloadData();
+                YukseklikCagrisiYap();
             }
             else
             {
@@ -87,8 +90,17 @@ namespace MyProfileiOS
 
                 CollView.RegisterClassForCell(typeof(ShortCell), ShortCell.CellID);
                 CollView.Source = new DataSourcee(UserGallery1, this);
+                CollView.ReloadData();
+                YukseklikCagrisiYap();
             }
         }
+
+        void YukseklikCagrisiYap()
+        {
+            CollView.LayoutIfNeeded();
+            SonYuksekligiAyarla.YukseklikUygula(CollView.ContentSize.Height);
+        }
+
         UIImagePickerController picker;
         public void ItemClick(UserGallery TiklananFotograf)
         {
@@ -162,6 +174,8 @@ namespace MyProfileiOS
                 CollView.ReloadData();
                 CollView.Source = new DataSourcee(UserGallery1, this);
                 CollView.ReloadData();
+                CollView.ReloadData();
+                YukseklikCagrisiYap();
                 return;
             }
             else

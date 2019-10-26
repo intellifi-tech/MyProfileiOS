@@ -196,11 +196,16 @@
     <None Include="packages.config" />
     <InterfaceDefinition Include="Etkinlikler\TakipEttiklerimHorizontalKisiView.xib" />
     <InterfaceDefinition Include="Profil\ProfilHeaderView2.xib" />
+    <InterfaceDefinition Include="Profil\DeneyimCustomTableCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnaMain\AnaMainTabBarViewController.cs" />
     <Compile Include="AnaMain\AnaMainTabBarViewController.designer.cs">
       <DependentUpon>AnaMainTabBarViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\DeneyimCustomTableCell.cs" />
+    <Compile Include="Profil\DeneyimCustomTableCell.designer.cs">
+      <DependentUpon>DeneyimCustomTableCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil\KisiselBilgilerFotografGaleri.cs" />
     <Compile Include="Profil\KisiselBilgilerFotografGaleri.designer.cs">
@@ -1577,6 +1582,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\vectorpaint_marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\tower.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

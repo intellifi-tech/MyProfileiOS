@@ -26,6 +26,7 @@ namespace MyProfileiOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+            SonYuksekligiAyarla.profilViewKontroller = this;
             GelenUser = DataBase.USER_INFO_GETIR()[0];
             SecilenKullanici.UserID = GelenUser.id;
             SetUserPhoto();
@@ -46,13 +47,14 @@ namespace MyProfileiOS
                 }
             })).Start();
         }
+        ProfilViewControllerSubController viewController;
 
         void GetProfilHeader()
         {
             var MainStoryBoard = UIStoryboard.FromName("Main", NSBundle.MainBundle);
-            var ProfilViewControllerSubController1 = MainStoryBoard.InstantiateViewController("ProfilViewControllerSubController") as ProfilViewControllerSubController;
+            var  ProfilViewControllerSubController1 = MainStoryBoard.InstantiateViewController("ProfilViewControllerSubController") as ProfilViewControllerSubController;
 
-            var viewController = ProfilViewControllerSubController1;
+            viewController = ProfilViewControllerSubController1;
 
             viewController.View.Frame = new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, 1000f);
             viewController.WillMoveToParentViewController(this);
@@ -79,8 +81,23 @@ namespace MyProfileiOS
             //GelenButton.Layer.ShadowRadius = GelenButton.Bounds.Height / 2;
             //GelenButton.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
         }
+       
+        public void SonGenisligeBakk(nfloat yukseklikk)
+        {
+            viewController.View.Frame = new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, yukseklikk);
+            ProfilScroll.ContentSize = new CGSize(UIScreen.MainScreen.Bounds.Width, yukseklikk);
+        }
     }
 
+    public static class SonYuksekligiAyarla
+    {
+        public static ProfilViewKontroller profilViewKontroller { get; set; }
+        public static float HeaderYukseklik { get; set; }
+        public static void YukseklikUygula(nfloat Yukseklikk)
+        {
+            profilViewKontroller.SonGenisligeBakk(Yukseklikk+ HeaderYukseklik);
+        }
+    }
 
     public static class SecilenKullanici
     {

@@ -29,6 +29,7 @@ namespace MyProfileiOS
         {
             base.ViewWillAppear(animated);
             EtkinliklerTablo.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+            EtkinliklerTablo.ScrollEnabled = false;
             FillDataModel();
         }
 
@@ -53,11 +54,17 @@ namespace MyProfileiOS
                         EtkinliklerTablo.SeparatorStyle = UITableViewCellSeparatorStyle.None;
                         EtkinliklerTablo.RowHeight = UITableView.AutomaticDimension;
                         EtkinliklerTablo.EstimatedRowHeight = 40f;
+                        EtkinliklerTablo.ReloadData();
+                        YukseklikCagrisiYap();
                     });
                 }
             })).Start();
         }
-
+        void YukseklikCagrisiYap()
+        {
+            EtkinliklerTablo.LayoutIfNeeded();
+            SonYuksekligiAyarla.YukseklikUygula(EtkinliklerTablo.ContentSize.Height);
+        }
         void SetUserInformationToList()
         {
             WebService webService = new WebService();

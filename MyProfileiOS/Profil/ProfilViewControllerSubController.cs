@@ -37,8 +37,9 @@ namespace MyProfileiOS
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
+            SonYuksekligiAyarla.HeaderYukseklik = (float)ContentViewww.Frame.Top;
             var colors = new[]
-           {
+            {
                 UIColor.FromRGB(48, 79, 254),
                 UIColor.FromRGB(48, 79, 254),
             };
@@ -72,7 +73,6 @@ namespace MyProfileiOS
             GetUserInfo();
             KapakDuzenleButton.TouchUpInside += KapakDuzenleButton_TouchUpInside;
             ProfilFotoDegistirButton.TouchUpInside += ProfilDuzenleButton_TouchUpInside;
-
         }
 
         private void ProfilDuzenleButton_TouchUpInside(object sender, EventArgs e)
@@ -318,7 +318,6 @@ namespace MyProfileiOS
             ProfilFotoDegistirButton.Layer.ShadowRadius = ProfilFotoDegistirButton.Bounds.Height / 2;
             ProfilFotoDegistirButton.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
         }
-
 
         #region DataModels
         public class User
