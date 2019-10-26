@@ -908,6 +908,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="210784">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="34"/>
+                                        <state key="normal"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -945,6 +946,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="210801">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="34"/>
+                                        <state key="normal"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1006,6 +1008,12 @@
                         <outlet property="ProfilDuzenleHazne" destination="210795" id="name-outlet-210795"/>
                         <outlet property="ProfilDuzenleIcon" destination="210796" id="name-outlet-210796"/>
                         <outlet property="ProfilFotoDegistirButton" destination="210813" id="name-outlet-210813"/>
+                        <outlet property="ProfilPhoto" destination="210770" id="name-outlet-210770"/>
+                        <outlet property="KapakPhoto" destination="210768" id="name-outlet-210768"/>
+                        <outlet property="KapakDuzenleButton" destination="210784" id="name-outlet-210784"/>
+                        <outlet property="ProfilDuzenleButton" destination="210801" id="name-outlet-210801"/>
+                        <outlet property="UserNameLabel" destination="210773" id="name-outlet-210773"/>
+                        <outlet property="UserTitleLabel" destination="210775" id="name-outlet-210775"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="208986" userLabel="First Responder" sceneMemberID="firstResponder"/>
