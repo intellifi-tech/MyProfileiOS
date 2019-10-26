@@ -457,7 +457,7 @@
                                     <constraint firstAttribute="width" constant="60" id="150494"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="150721">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="150721" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="131" width="320" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -622,7 +622,7 @@
                                 </constraints>
                                 <state key="normal" image="Images/menu.png"/>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84748">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84748" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="336" width="320" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="85195"/>
@@ -727,7 +727,7 @@
                                     <constraint firstAttribute="width" constant="60" id="181017"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="205282">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="205282" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="88" width="320" height="430"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="206791">
@@ -778,14 +778,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95489">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95489" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="104036"/>
                                 </constraints>
                             </scrollView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="118694">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="118694" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="125" width="320" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -822,7 +822,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="146227">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="146227" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -1032,7 +1032,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="242163">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="242163" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -1065,7 +1065,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="245195">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="245195" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -1124,6 +1124,188 @@
             </objects>
             <point key="canvasLocation" x="3058" y="880"/>
         </scene>
+        <scene sceneID="249675">
+            <objects>
+                <viewController id="249676" sceneMemberID="viewController" customClass="EtkinlikKisiBazliListeVC" storyboardIdentifier="EtkinlikKisiBazliListeVC" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="249673"/>
+                        <viewControllerLayoutGuide type="bottom" id="249674"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="249677">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="250392" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="250393" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="250394" firstAttribute="height" constant="30"/>
+                                            <constraint id="250395" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="250396" translatesAutoresizingMaskIntoConstraints="NO" image="Images/male_avatar.png">
+                                        <rect key="frame" x="262" y="4" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint id="250397" firstAttribute="height" constant="50"/>
+                                            <constraint id="250398" firstAttribute="width" constant="50"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Impus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="250399" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="46" y="18" width="208" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="250400" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="250401" firstAttribute="height" constant="57"/>
+                                    <constraint id="250402" firstItem="250393" firstAttribute="leading" secondItem="250392" secondAttribute="leading" constant="8"/>
+                                    <constraint id="250403" firstItem="250393" firstAttribute="top" secondItem="250392" secondAttribute="top" constant="14"/>
+                                    <constraint id="250404" firstItem="250399" firstAttribute="leading" secondItem="250393" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="250405" firstAttribute="trailing" secondItem="250396" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="250406" firstItem="250396" firstAttribute="top" secondItem="250392" secondAttribute="top" constant="4"/>
+                                    <constraint id="250407" firstItem="250396" firstAttribute="leading" secondItem="250399" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="250408" firstItem="250399" firstAttribute="top" secondItem="250392" secondAttribute="top" constant="18"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="250588" translatesAutoresizingMaskIntoConstraints="NO" showsVerticalScrollIndicator="NO" showsHorizontalScrollIndicator="NO">
+                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="250453" firstItem="250392" firstAttribute="trailing" secondItem="249677" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="250498" firstAttribute="leadingMargin" secondItem="250392" secondAttribute="leading" constant="16"/>
+                            <constraint id="250543" firstItem="250392" firstAttribute="top" secondItem="249677" secondAttribute="top" constant="15"/>
+                            <constraint id="250855" firstItem="250588" firstAttribute="bottom" secondItem="249677" secondAttribute="bottom"/>
+                            <constraint id="250900" firstItem="250588" firstAttribute="trailing" secondItem="249677" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="250945" firstAttribute="leadingMargin" secondItem="250588" secondAttribute="leading" constant="16"/>
+                            <constraint id="250990" firstItem="250588" firstAttribute="top" secondItem="250392" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="250393" id="name-outlet-250393"/>
+                        <outlet property="UserNameLabel" destination="250399" id="name-outlet-250399"/>
+                        <outlet property="UserPhoto" destination="250396" id="name-outlet-250396"/>
+                        <outlet property="EtkinlikTablo" destination="250588" id="name-outlet-250588"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="249678" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="-337"/>
+        </scene>
+        <scene sceneID="252260">
+            <objects>
+                <viewController id="252261" sceneMemberID="viewController" customClass="EtkinlikDetayBaseVC" storyboardIdentifier="EtkinlikDetayBaseVC" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="252258"/>
+                        <viewControllerLayoutGuide type="bottom" id="252259"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="252262">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="252278" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="252279" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="252280" firstAttribute="height" constant="30"/>
+                                            <constraint id="252281" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etkinlik Detaylar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="252285" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="46" y="18" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="252286" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="252300" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="282" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/share-2.png"/>
+                                        <constraints>
+                                            <constraint id="252301" firstAttribute="height" constant="30"/>
+                                            <constraint id="252302" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="252305" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="244" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/users.png"/>
+                                        <constraints>
+                                            <constraint id="252306" firstAttribute="height" constant="30"/>
+                                            <constraint id="252307" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="252310" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="206" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/meflash.png"/>
+                                        <constraints>
+                                            <constraint id="252311" firstAttribute="height" constant="30"/>
+                                            <constraint id="252312" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="252287" firstAttribute="height" constant="57"/>
+                                    <constraint id="252288" firstItem="252279" firstAttribute="leading" secondItem="252278" secondAttribute="leading" constant="8"/>
+                                    <constraint id="252289" firstItem="252279" firstAttribute="top" secondItem="252278" secondAttribute="top" constant="14"/>
+                                    <constraint id="252290" firstItem="252285" firstAttribute="leading" secondItem="252279" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="252294" firstItem="252285" firstAttribute="top" secondItem="252278" secondAttribute="top" constant="18"/>
+                                    <constraint id="252315" firstAttribute="trailing" secondItem="252300" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="252316" firstItem="252300" firstAttribute="top" secondItem="252278" secondAttribute="top" constant="14"/>
+                                    <constraint id="252317" firstItem="252300" firstAttribute="leading" secondItem="252305" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="252318" firstItem="252305" firstAttribute="top" secondItem="252278" secondAttribute="top" constant="14"/>
+                                    <constraint id="252319" firstItem="252305" firstAttribute="leading" secondItem="252310" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="252320" firstItem="252310" firstAttribute="top" secondItem="252278" secondAttribute="top" constant="14"/>
+                                    <constraint id="252321" firstItem="252310" firstAttribute="leading" secondItem="252285" secondAttribute="trailing" constant="8"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="254975" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="252295" firstItem="252278" firstAttribute="trailing" secondItem="252262" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="252296" firstAttribute="leadingMargin" secondItem="252278" secondAttribute="leading" constant="16"/>
+                            <constraint id="252297" firstItem="252278" firstAttribute="top" secondItem="252262" secondAttribute="top" constant="15"/>
+                            <constraint id="255501" firstItem="254975" firstAttribute="bottom" secondItem="252262" secondAttribute="bottom"/>
+                            <constraint id="255729" firstItem="254975" firstAttribute="top" secondItem="252278" secondAttribute="bottom" constant="8"/>
+                            <constraint id="257079" firstItem="254975" firstAttribute="trailing" secondItem="252262" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="257080" firstAttribute="leadingMargin" secondItem="254975" secondAttribute="leading" constant="16"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="252279" id="name-outlet-252279"/>
+                        <outlet property="EtkinlikOlusturButton" destination="252310" id="name-outlet-252310"/>
+                        <outlet property="KatilimcilarButton" destination="252305" id="name-outlet-252305"/>
+                        <outlet property="PaylasButton" destination="252300" id="name-outlet-252300"/>
+                        <outlet property="ScrollVieww" destination="254975" id="name-outlet-254975"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="252263" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3181" y="-339"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Images/cover_vector3.png" width="595" height="235"/>
@@ -1141,5 +1323,9 @@
         <image name="Images/public.png" width="30" height="30"/>
         <image name="Images/user-add.png" width="48" height="48"/>
         <image name="Images/user.png" width="48" height="48"/>
+        <image name="Images/chevrons-left.png" width="48" height="48"/>
+        <image name="Images/meflash.png" width="48" height="48"/>
+        <image name="Images/share-2.png" width="48" height="48"/>
+        <image name="Images/users.png" width="48" height="48"/>
     </resources>
 </document>

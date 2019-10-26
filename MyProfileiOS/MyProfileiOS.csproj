@@ -186,6 +186,8 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Etkinlikler\EtkinlikCustomCardView.xib" />
+    <InterfaceDefinition Include="Etkinlikler\EtkinlikDetay\YorumCustomCell.xib" />
+    <InterfaceDefinition Include="Etkinlikler\EtkinlikDetay\CommentCell.xib" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <InterfaceDefinition Include="Kesfet\KesfetCustomKisiView.xib" />
@@ -202,6 +204,22 @@
     <Compile Include="AnaMain\AnaMainTabBarViewController.cs" />
     <Compile Include="AnaMain\AnaMainTabBarViewController.designer.cs">
       <DependentUpon>AnaMainTabBarViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler\EtkinlikDetay\CommentCell.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\CommentCell.designer.cs">
+      <DependentUpon>CommentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikDetayBaseVC.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikDetayBaseVC.designer.cs">
+      <DependentUpon>EtkinlikDetayBaseVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler\EtkinlikDetay\YorumCustomCell.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\YorumCustomCell.designer.cs">
+      <DependentUpon>YorumCustomCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler\KisiBazliListe\EtkinlikKisiBazliListeVC.cs" />
+    <Compile Include="Etkinlikler\KisiBazliListe\EtkinlikKisiBazliListeVC.designer.cs">
+      <DependentUpon>EtkinlikKisiBazliListeVC.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil\DeneyimCustomTableCell.cs" />
     <Compile Include="Profil\DeneyimCustomTableCell.designer.cs">

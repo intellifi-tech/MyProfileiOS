@@ -77,10 +77,11 @@ namespace MyProfileiOS
 
                         if (EtkinliklerDataModel1.Count > 0)
                         {
+                            //EtkinliklerDataModel1.ForEach(item => item.event_description = " auýsdas dkasbdkasvd kas dkjavsdk avskdj vaskdv aksdvaskvd aksvd kahsgvd hkagsdhkgas vdkasvdkjasvd kasvd asvd kasvd kavd avdkgasvd kavd kgasvdk vaskdv askjdv aksjvd aksvd kahgsvd ahgsvdahgsvdas ghc");
                             //EtkinlikTableView.RegisterClassForCellReuse(typeof(EtkinlikCustomCardView), "EtkinlikCustomCardView");
                             EtkinlikTableView.RegisterNibForCellReuse(UINib.FromName("EtkinlikCustomCardView", NSBundle.MainBundle), "EtkinlikCustomCardView");
                             EtkinlikTableView.Source = new EtkinliklerListCustomTableSource(EtkinliklerDataModel1, this);
-                            EtkinlikTableView.Delegate = new EtkinliklerTableDelegate();
+                            //EtkinlikTableView.Delegate = new EtkinliklerTableDelegate();
                             EtkinlikTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
                             EtkinlikTableView.RowHeight = UITableView.AutomaticDimension;
                             EtkinlikTableView.EstimatedRowHeight = 40f;
@@ -140,7 +141,12 @@ namespace MyProfileiOS
                             {
                                 NoktaItem.Frame = new CGRect(96f * i, 0, 96f, 125f);
                             }
-
+                            var Buttonn = new UIButton();
+                            Buttonn.SetTitle(TakipEttiklerimDataModel1[i].id.ToString(), UIControlState.Normal);
+                            Buttonn.Frame = NoktaItem.Bounds;
+                            Buttonn.SetTitleColor(UIColor.Clear, UIControlState.Normal);
+                            Buttonn.TouchUpInside += Buttonn_TouchUpInside;
+                            NoktaItem.AddSubview(Buttonn);
                             HorizontalTakipKisiScroll.AddSubview(NoktaItem);
                             TakipEttiklerimHorizontalKisiView1[i] = NoktaItem;
                         }
@@ -166,6 +172,22 @@ namespace MyProfileiOS
           
            
         }
+
+        private void Buttonn_TouchUpInside(object sender, EventArgs e)
+        {
+            var UserId = ((UIButton)sender).Title(UIControlState.Normal);
+            var LokasyonKisilerStory = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            EtkinlikKisiBazliListeVC controller = LokasyonKisilerStory.InstantiateViewController("EtkinlikKisiBazliListeVC") as EtkinlikKisiBazliListeVC;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            controller.UserID = UserId;
+            var KisininEventleri = EtkinliklerDataModel1.FindAll(item => item.user_id.ToString() == UserId);
+            if (KisininEventleri.Count > 0)
+            {
+                controller.GelenListe = KisininEventleri;
+                this.PresentViewController(controller, true, null);
+            }
+        }
+
         void GetRigToLeftScrollView()
         {
             new System.Threading.Thread(new System.Threading.ThreadStart(delegate
@@ -191,6 +213,14 @@ namespace MyProfileiOS
             })).Start();
         }
 
+        public void RowClick(UserAttendedEvent TiklananModel)
+        {
+            var LokasyonKisilerStory = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            EtkinlikDetayBaseVC controller = LokasyonKisilerStory.InstantiateViewController("EtkinlikDetayBaseVC") as EtkinlikDetayBaseVC;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            controller.GelenModel1 = TiklananModel;
+            this.PresentViewController(controller, true, null);
+        }
 
         public class Following
         {
@@ -301,34 +331,26 @@ namespace MyProfileiOS
             //    var itemss = TableItems[indexPath.Row];
             //    return 238f;
             //}
+
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
             {
-                //if (Secimler[indexPath.Row])
-                //{
-
-                //    Secimler[indexPath.Row] = false;
-                //}
-                //else
-                //{
-
-                //    Secimler[indexPath.Row] = true;
-                //}
-
                 tableView.DeselectRow(indexPath, true);
-                //tableView.BeginUpdates();
-                //tableView.ReloadRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-                //tableView.EndUpdates();
-
-                //tableView.ScrollToRow(indexPath, UITableViewScrollPosition.Top, true);
-                //var secimm = TableItems[indexPath.Row];
-                //tableView.DeselectRow(indexPath, true);
-                //AnaMainListCustomView1.RowClickk(secimm);
-
+                AnaMainListCustomView1.RowClick(TableItems[indexPath.Row]);
             }
+
+            //public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+            //{
+
+
+            //    tableView.DeselectRow(indexPath, true);
+            //    AnaMainListCustomView1.RowClick(TableItems[indexPath.Row]);
+
+            //}
         }
 
         public class EtkinliklerTableDelegate : UITableViewDelegate
         {
+            TakipEttiklerimEtkinliklerViewController AnaMainListCustomView1;
             public EtkinliklerTableDelegate()
             {
             }
@@ -338,7 +360,8 @@ namespace MyProfileiOS
             }
             public override void RowSelected(UITableView tableView, Foundation.NSIndexPath indexPath)
             {
-                // Output selected row
+                tableView.DeselectRow(indexPath, true);
+                //AnaMainListCustomView1.RowClick(TableItems[indexPath.Row]);
                 Console.WriteLine("Row selected: {0}", indexPath.Row);
             }
         }

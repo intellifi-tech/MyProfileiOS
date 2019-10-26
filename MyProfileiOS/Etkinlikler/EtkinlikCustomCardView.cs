@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CoreAnimation;
+using CoreGraphics;
 using FFImageLoading;
 using Foundation;
 using MyProfileiOS.WebServiceHelper;
@@ -129,7 +130,7 @@ namespace MyProfileiOS
                         InvokeOnMainThread(delegate ()
                         {
                             KatilimciSayiText.Text = "-";
-                        }); ;
+                        }); 
                     }
                    
 
@@ -138,6 +139,21 @@ namespace MyProfileiOS
 
 
             })).Start();
+        }
+
+
+        //Detay Sayfası İçin
+       public int LabelYusekliginiGetir()
+        {
+            AciklamaLabel.LayoutIfNeeded();
+            var ilk = AciklamaLabel.Frame.Height;
+            this.LayoutIfNeeded();
+            var aaa = AciklamaLabel.SizeThatFits(AciklamaLabel.Frame.Size).Height;
+            var fark = aaa - ilk;
+            var newfmm = this.ContentView.Frame;
+            newfmm.Height += fark;
+            this.ContentView.Frame = newfmm;
+            return (int)this.ContentView.Frame.Height;
         }
 
         public class RootObject
