@@ -16,6 +16,10 @@ namespace MyProfileiOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.NSLayoutConstraint BottomKisitlama { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton EtkinlikOlusturButton { get; set; }
 
         [Outlet]
@@ -34,8 +38,25 @@ namespace MyProfileiOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIScrollView ScrollVieww { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton YorumGonderButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField YorumTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView YorumYazAltHazne { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (BottomKisitlama != null) {
+                BottomKisitlama.Dispose ();
+                BottomKisitlama = null;
+            }
+
             if (EtkinlikOlusturButton != null) {
                 EtkinlikOlusturButton.Dispose ();
                 EtkinlikOlusturButton = null;
@@ -59,6 +80,21 @@ namespace MyProfileiOS
             if (ScrollVieww != null) {
                 ScrollVieww.Dispose ();
                 ScrollVieww = null;
+            }
+
+            if (YorumGonderButton != null) {
+                YorumGonderButton.Dispose ();
+                YorumGonderButton = null;
+            }
+
+            if (YorumTextField != null) {
+                YorumTextField.Dispose ();
+                YorumTextField = null;
+            }
+
+            if (YorumYazAltHazne != null) {
+                YorumYazAltHazne.Dispose ();
+                YorumYazAltHazne = null;
             }
         }
     }

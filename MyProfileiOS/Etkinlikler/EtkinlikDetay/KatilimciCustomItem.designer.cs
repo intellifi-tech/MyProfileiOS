@@ -10,13 +10,9 @@ using System.CodeDom.Compiler;
 
 namespace MyProfileiOS.Etkinlikler.EtkinlikDetay
 {
-    [Register ("YorumCustomCell")]
-    partial class YorumCustomCell
+    [Register ("KatilimciCustomItem")]
+    partial class KatilimciCustomItem
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton ProfileGitButton { get; set; }
-
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel UserName { get; set; }
@@ -27,15 +23,10 @@ namespace MyProfileiOS.Etkinlikler.EtkinlikDetay
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel UserYorum { get; set; }
+        UIKit.UILabel UserTitle { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (ProfileGitButton != null) {
-                ProfileGitButton.Dispose ();
-                ProfileGitButton = null;
-            }
-
             if (UserName != null) {
                 UserName.Dispose ();
                 UserName = null;
@@ -46,9 +37,9 @@ namespace MyProfileiOS.Etkinlikler.EtkinlikDetay
                 UserPhoto = null;
             }
 
-            if (UserYorum != null) {
-                UserYorum.Dispose ();
-                UserYorum = null;
+            if (UserTitle != null) {
+                UserTitle.Dispose ();
+                UserTitle = null;
             }
         }
     }

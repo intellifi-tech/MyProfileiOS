@@ -1281,17 +1281,49 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="254975" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="436"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" id="258448" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="524" width="320" height="43"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="258450" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Bir şeyler yaz...">
+                                        <rect key="frame" x="8" y="6" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="258451" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="266" y="6" width="46" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                        <state key="normal" image="Images/send-2.png"/>
+                                        <constraints>
+                                            <constraint id="258457" firstAttribute="height" constant="30"/>
+                                            <constraint id="258458" firstAttribute="width" constant="46"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="258452" firstItem="258450" firstAttribute="leading" secondItem="258448" secondAttribute="leading" constant="8"/>
+                                    <constraint id="258453" firstAttribute="height" constant="43"/>
+                                    <constraint id="258459" firstAttribute="trailing" secondItem="258451" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="258460" firstItem="258451" firstAttribute="top" secondItem="258448" secondAttribute="top" constant="6"/>
+                                    <constraint id="258461" firstItem="258451" firstAttribute="leading" secondItem="258450" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="258462" firstItem="258450" firstAttribute="top" secondItem="258448" secondAttribute="top" constant="6"/>
+                                    <constraint id="258463" firstAttribute="bottom" secondItem="258450" secondAttribute="bottom" constant="7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint id="252295" firstItem="252278" firstAttribute="trailing" secondItem="252262" secondAttribute="trailingMargin" constant="16"/>
                             <constraint id="252296" firstAttribute="leadingMargin" secondItem="252278" secondAttribute="leading" constant="16"/>
                             <constraint id="252297" firstItem="252278" firstAttribute="top" secondItem="252262" secondAttribute="top" constant="15"/>
-                            <constraint id="255501" firstItem="254975" firstAttribute="bottom" secondItem="252262" secondAttribute="bottom"/>
                             <constraint id="255729" firstItem="254975" firstAttribute="top" secondItem="252278" secondAttribute="bottom" constant="8"/>
                             <constraint id="257079" firstItem="254975" firstAttribute="trailing" secondItem="252262" secondAttribute="trailingMargin" constant="16"/>
                             <constraint id="257080" firstAttribute="leadingMargin" secondItem="254975" secondAttribute="leading" constant="16"/>
+                            <constraint id="258449" firstItem="258448" firstAttribute="top" secondItem="254975" secondAttribute="bottom" constant="8"/>
+                            <constraint id="258454" firstItem="258448" firstAttribute="trailing" secondItem="252262" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="258455" firstAttribute="leadingMargin" secondItem="258448" secondAttribute="leading" constant="16"/>
+                            <constraint id="258456" firstItem="252259" firstAttribute="top" secondItem="258448" secondAttribute="bottom" constant="1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1300,11 +1332,83 @@
                         <outlet property="KatilimcilarButton" destination="252305" id="name-outlet-252305"/>
                         <outlet property="PaylasButton" destination="252300" id="name-outlet-252300"/>
                         <outlet property="ScrollVieww" destination="254975" id="name-outlet-254975"/>
+                        <outlet property="BottomKisitlama" destination="258456" id="name-outlet-258456"/>
+                        <outlet property="YorumTextField" destination="258450" id="name-outlet-258450"/>
+                        <outlet property="YorumGonderButton" destination="258451" id="name-outlet-258451"/>
+                        <outlet property="YorumYazAltHazne" destination="258448" id="name-outlet-258448"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="252263" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3181" y="-339"/>
+            <point key="canvasLocation" x="3094" y="-334"/>
+        </scene>
+        <scene sceneID="259852">
+            <objects>
+                <viewController id="259853" sceneMemberID="viewController" customClass="EtkinlikKatilimcilariVC" storyboardIdentifier="EtkinlikKatilimcilariVC" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="259850"/>
+                        <viewControllerLayoutGuide type="bottom" id="259851"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="259854">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="259870" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="259871" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="259872" firstAttribute="height" constant="30"/>
+                                            <constraint id="259873" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Katılımcılar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="259877" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="111" y="18" width="98" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="259878" firstAttribute="height" constant="21"/>
+                                            <constraint id="259891" firstAttribute="width" constant="98"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="259879" firstAttribute="height" constant="57"/>
+                                    <constraint id="259880" firstItem="259871" firstAttribute="leading" secondItem="259870" secondAttribute="leading" constant="8"/>
+                                    <constraint id="259881" firstItem="259871" firstAttribute="top" secondItem="259870" secondAttribute="top" constant="14"/>
+                                    <constraint id="259886" firstItem="259877" firstAttribute="top" secondItem="259870" secondAttribute="top" constant="18"/>
+                                    <constraint id="259892" firstItem="259877" firstAttribute="centerX" secondItem="259870" secondAttribute="centerX"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="259893" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="259887" firstItem="259870" firstAttribute="trailing" secondItem="259854" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="259888" firstAttribute="leadingMargin" secondItem="259870" secondAttribute="leading" constant="16"/>
+                            <constraint id="259889" firstItem="259870" firstAttribute="top" secondItem="259854" secondAttribute="top" constant="15"/>
+                            <constraint id="259896" firstItem="259893" firstAttribute="bottom" secondItem="259854" secondAttribute="bottom"/>
+                            <constraint id="259897" firstAttribute="leadingMargin" secondItem="259893" secondAttribute="leading" constant="16"/>
+                            <constraint id="259898" firstItem="259893" firstAttribute="trailing" secondItem="259854" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="259899" firstItem="259893" firstAttribute="top" secondItem="259870" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="259871" id="name-outlet-259871"/>
+                        <outlet property="Tabloo" destination="259893" id="name-outlet-259893"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="259855" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3450" y="-332"/>
         </scene>
     </scenes>
     <resources>
@@ -1327,5 +1431,6 @@
         <image name="Images/meflash.png" width="48" height="48"/>
         <image name="Images/share-2.png" width="48" height="48"/>
         <image name="Images/users.png" width="48" height="48"/>
+        <image name="Images/send-2.png" width="48" height="48"/>
     </resources>
 </document>
