@@ -535,8 +535,51 @@
                                     <constraint firstAttribute="height" constant="55" id="148565"/>
                                     <constraint firstAttribute="width" constant="55" id="148567"/>
                                 </constraints>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.37647058823529411" blue="1" alpha="1"/>
                                 <state key="normal" image="Images/flash.png"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="261317" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="248" y="380" width="40" height="40"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <state key="normal" image="Images/flash.png"/>
+                                <constraints>
+                                    <constraint id="261322" firstAttribute="height" constant="40"/>
+                                    <constraint id="261323" firstAttribute="width" constant="40"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="261319" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="248" y="320" width="40" height="40"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <state key="normal" image="Images/users-add.png"/>
+                                <constraints>
+                                    <constraint id="261324" firstAttribute="height" constant="40"/>
+                                    <constraint id="261325" firstAttribute="width" constant="40"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni etkinlik oluştur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="261320" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="98" y="390" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="0.78431372549019607"/>
+                                <constraints>
+                                    <constraint id="261328" firstAttribute="width" constant="131"/>
+                                    <constraint id="261329" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="261321" translatesAutoresizingMaskIntoConstraints="NO" text="Mevcut etkinliğe katıl.">
+                                <rect key="frame" x="84" y="330" width="148" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="0.78431372549019607"/>
+                                <constraints>
+                                    <constraint id="261326" firstAttribute="width" constant="148"/>
+                                    <constraint id="261327" firstAttribute="height" constant="20"/>
+                                </constraints>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -551,6 +594,14 @@
                             <constraint firstItem="114360" firstAttribute="bottom" secondItem="14097" secondAttribute="top" id="114370"/>
                             <constraint firstAttribute="trailingMargin" secondItem="147702" secondAttribute="trailing" constant="9" id="148568"/>
                             <constraint firstItem="14097" firstAttribute="top" secondItem="147702" secondAttribute="bottom" constant="27" id="148569"/>
+                            <constraint id="261330" firstItem="147702" firstAttribute="top" secondItem="261317" secondAttribute="bottom" constant="16"/>
+                            <constraint id="261331" firstAttribute="trailingMargin" secondItem="261317" secondAttribute="trailing" constant="16"/>
+                            <constraint id="261332" firstItem="261317" firstAttribute="leading" secondItem="261320" secondAttribute="trailing" constant="19"/>
+                            <constraint id="261333" firstItem="147702" firstAttribute="top" secondItem="261320" secondAttribute="bottom" constant="25"/>
+                            <constraint id="261334" firstItem="261317" firstAttribute="top" secondItem="261319" secondAttribute="bottom" constant="20"/>
+                            <constraint id="261335" firstAttribute="trailingMargin" secondItem="261319" secondAttribute="trailing" constant="16"/>
+                            <constraint id="261336" firstItem="261319" firstAttribute="leading" secondItem="261321" secondAttribute="trailing" constant="16"/>
+                            <constraint id="261337" firstItem="261317" firstAttribute="top" secondItem="261321" secondAttribute="bottom" constant="30"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Etkinlikler" image="Images/flash.png" id="14103"/>
@@ -558,6 +609,10 @@
                         <outlet property="KullaniciFoto" destination="92137" id="name-outlet-92137"/>
                         <outlet property="PgerHazneee" destination="114360" id="name-outlet-114360"/>
                         <outlet property="YeniEtkinlikOlusturButton" destination="147702" id="name-outlet-147702"/>
+                        <outlet property="YeniEtkinlikSubButton" destination="261317" id="name-outlet-261317"/>
+                        <outlet property="YeniEtkinlikSubLabel" destination="261320" id="name-outlet-261320"/>
+                        <outlet property="EtkinligeKatilSubButton" destination="261319" id="name-outlet-261319"/>
+                        <outlet property="EtkinligeKatilSubLabel" destination="261321" id="name-outlet-261321"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14104" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1410,6 +1465,313 @@
             </objects>
             <point key="canvasLocation" x="3450" y="-332"/>
         </scene>
+        <scene sceneID="262794">
+            <objects>
+                <viewController id="262795" sceneMemberID="viewController" customClass="MevcutEtkinlikBaseVC" storyboardIdentifier="MevcutEtkinlikBaseVC" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="262792"/>
+                        <viewControllerLayoutGuide type="bottom" id="262793"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="262796">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="263253" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="263254" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="263255" firstAttribute="height" constant="30"/>
+                                            <constraint id="263256" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yakınımdaki Etkinlikler" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="263296" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="84" y="18" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="263311" firstAttribute="height" constant="21"/>
+                                            <constraint id="263312" firstAttribute="width" constant="152"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="263260" firstAttribute="height" constant="57"/>
+                                    <constraint id="263261" firstItem="263254" firstAttribute="leading" secondItem="263253" secondAttribute="leading" constant="8"/>
+                                    <constraint id="263262" firstItem="263254" firstAttribute="top" secondItem="263253" secondAttribute="top" constant="14"/>
+                                    <constraint id="263307" firstItem="263296" firstAttribute="centerX" secondItem="263253" secondAttribute="centerX"/>
+                                    <constraint id="263313" firstItem="263296" firstAttribute="top" secondItem="263253" secondAttribute="top" constant="18"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="263314" translatesAutoresizingMaskIntoConstraints="NO" image="Images/light-2.png">
+                                <rect key="frame" x="10" y="84" width="32" height="33"/>
+                                <constraints>
+                                    <constraint id="263319" firstAttribute="height" constant="33"/>
+                                    <constraint id="263320" firstAttribute="width" constant="32"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Katılmak istediğiniz etkinliği listeden seçip edebilirsiniz." textAlignment="natural" lineBreakMode="wordWrap" id="263315" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" minimumFontSize="9" baselineAdjustment="alignBaselines">
+                                <rect key="frame" x="50" y="80" width="254" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="263325" firstAttribute="height" constant="40"/>
+                                </constraints>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="263316" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="128" width="320" height="440"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="263308" firstItem="263253" firstAttribute="trailing" secondItem="262796" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="263309" firstAttribute="leadingMargin" secondItem="263253" secondAttribute="leading" constant="16"/>
+                            <constraint id="263310" firstItem="263253" firstAttribute="top" secondItem="262796" secondAttribute="top" constant="15"/>
+                            <constraint id="263321" firstAttribute="leadingMargin" secondItem="263314" secondAttribute="leading" constant="6"/>
+                            <constraint id="263322" firstItem="263314" firstAttribute="top" secondItem="263253" secondAttribute="bottom" constant="12"/>
+                            <constraint id="263323" firstItem="263315" firstAttribute="leading" secondItem="263314" secondAttribute="trailing" constant="8"/>
+                            <constraint id="263324" firstItem="263315" firstAttribute="top" secondItem="263253" secondAttribute="bottom" constant="8"/>
+                            <constraint id="263326" firstItem="263315" firstAttribute="trailing" secondItem="262796" secondAttribute="trailingMargin"/>
+                            <constraint id="263327" firstItem="263316" firstAttribute="top" secondItem="263315" secondAttribute="bottom" constant="8"/>
+                            <constraint id="263328" firstItem="263316" firstAttribute="trailing" secondItem="262796" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="263329" firstAttribute="leadingMargin" secondItem="263316" secondAttribute="leading" constant="16"/>
+                            <constraint id="263330" firstItem="263316" firstAttribute="bottom" secondItem="262796" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="263254" id="name-outlet-263254"/>
+                        <outlet property="Tabloo" destination="263316" id="name-outlet-263316"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="262797" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3794" y="-331"/>
+        </scene>
+        <scene sceneID="264877">
+            <objects>
+                <viewController id="264878" sceneMemberID="viewController" customClass="YeniEtkinlikOlusturBaseVC" storyboardIdentifier="YeniEtkinlikOlusturBaseVC" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="264875"/>
+                        <viewControllerLayoutGuide type="bottom" id="264876"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="264879">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="264909" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="15" width="320" height="57"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="264910" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="8" y="14" width="30" height="30"/>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button" image="Images/chevrons-left.png"/>
+                                        <constraints>
+                                            <constraint id="264911" firstAttribute="height" constant="30"/>
+                                            <constraint id="264912" firstAttribute="width" constant="30"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Etkinlik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="264913" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                        <rect key="frame" x="84" y="18" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="264914" firstAttribute="height" constant="21"/>
+                                            <constraint id="264915" firstAttribute="width" constant="152"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="264916" firstAttribute="height" constant="57"/>
+                                    <constraint id="264917" firstItem="264910" firstAttribute="leading" secondItem="264909" secondAttribute="leading" constant="8"/>
+                                    <constraint id="264918" firstItem="264910" firstAttribute="top" secondItem="264909" secondAttribute="top" constant="14"/>
+                                    <constraint id="264919" firstItem="264913" firstAttribute="centerX" secondItem="264909" secondAttribute="centerX"/>
+                                    <constraint id="264920" firstItem="264913" firstAttribute="top" secondItem="264909" secondAttribute="top" constant="18"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="264924" translatesAutoresizingMaskIntoConstraints="NO" text="Etkinlik hakkında bir şeyler yaz..">
+                                <rect key="frame" x="16" y="120" width="288" height="88"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <constraints>
+                                    <constraint id="266563" firstAttribute="height" constant="88"/>
+                                </constraints>
+                            </textView>
+                            <view contentMode="scaleToFill" id="264925" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="216" width="140" height="31"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="265413" translatesAutoresizingMaskIntoConstraints="NO" image="Images/time.png">
+                                        <rect key="frame" x="8" y="2" width="22" height="27"/>
+                                        <constraints>
+                                            <constraint id="265417" firstAttribute="height" constant="27"/>
+                                            <constraint id="265418" firstAttribute="width" constant="22"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="265416" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="38" y="0.0" width="102" height="31"/>
+                                        <state key="normal" title="Giriş Saati">
+                                            <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="265446" firstAttribute="height" constant="31"/>
+                                    <constraint id="265455" firstAttribute="bottom" secondItem="265413" secondAttribute="bottom" constant="2"/>
+                                    <constraint id="265456" firstItem="265413" firstAttribute="leading" secondItem="264925" secondAttribute="leading" constant="8"/>
+                                    <constraint id="265457" firstItem="265416" firstAttribute="leading" secondItem="265413" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="265458" firstItem="265416" firstAttribute="top" secondItem="264925" secondAttribute="top"/>
+                                    <constraint id="265459" firstItem="265416" firstAttribute="trailing" secondItem="264925" secondAttribute="trailing"/>
+                                    <constraint id="265460" firstItem="265416" firstAttribute="bottom" secondItem="264925" secondAttribute="bottom"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="265427" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="164" y="216" width="140" height="31"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="265428" translatesAutoresizingMaskIntoConstraints="NO" image="Images/time.png">
+                                        <rect key="frame" x="8" y="2" width="22" height="27"/>
+                                        <constraints>
+                                            <constraint id="265429" firstAttribute="height" constant="27"/>
+                                            <constraint id="265430" firstAttribute="width" constant="22"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="265431" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="38" y="0.0" width="102" height="31"/>
+                                        <state key="normal" title="Çıkış Saati">
+                                            <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="265453" firstAttribute="height" constant="31"/>
+                                    <constraint id="265461" firstItem="265428" firstAttribute="leading" secondItem="265427" secondAttribute="leading" constant="8"/>
+                                    <constraint id="265462" firstAttribute="bottom" secondItem="265428" secondAttribute="bottom" constant="2"/>
+                                    <constraint id="265463" firstItem="265431" firstAttribute="leading" secondItem="265428" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="265464" firstItem="265431" firstAttribute="top" secondItem="265427" secondAttribute="top"/>
+                                    <constraint id="265465" firstItem="265431" firstAttribute="trailing" secondItem="265427" secondAttribute="trailing"/>
+                                    <constraint id="265466" firstItem="265431" firstAttribute="bottom" secondItem="265427" secondAttribute="bottom"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="265468" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="506" width="288" height="42"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="OLUŞTUR">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="265469" firstAttribute="height" constant="42"/>
+                                </constraints>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="266557" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Etkinlik Adı">
+                                <rect key="frame" x="16" y="80" width="288" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1"/>
+                                <constraints>
+                                    <constraint id="266561" firstAttribute="height" constant="32"/>
+                                </constraints>
+                            </textField>
+                            <view contentMode="scaleToFill" id="267883" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="456" width="288" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="265478" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="32" y="0.0" width="224" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="265479" translatesAutoresizingMaskIntoConstraints="NO" image="Images/photo.png">
+                                                <rect key="frame" x="15" y="0.0" width="23" height="42"/>
+                                                <constraints>
+                                                    <constraint id="267926" firstAttribute="height" constant="42"/>
+                                                    <constraint id="267927" firstAttribute="width" constant="23"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="265480" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="46" y="0.0" width="171" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Etkinliğe Fotoğraf Ekleyin">
+                                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint id="267920" firstAttribute="height" constant="42"/>
+                                            <constraint id="267921" firstAttribute="width" constant="224"/>
+                                            <constraint id="267924" firstItem="265479" firstAttribute="leading" secondItem="265478" secondAttribute="leading" constant="15"/>
+                                            <constraint id="267925" firstItem="265479" firstAttribute="top" secondItem="265478" secondAttribute="top"/>
+                                            <constraint id="267928" firstItem="265480" firstAttribute="leading" secondItem="265479" secondAttribute="trailing" constant="8"/>
+                                            <constraint id="267929" firstItem="265480" firstAttribute="bottom" secondItem="265478" secondAttribute="bottom"/>
+                                            <constraint id="267930" firstAttribute="trailing" secondItem="265480" secondAttribute="trailing" constant="7"/>
+                                            <constraint id="267931" firstItem="265480" firstAttribute="top" secondItem="265478" secondAttribute="top"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="267916" firstAttribute="height" constant="42"/>
+                                    <constraint id="267922" firstItem="265478" firstAttribute="centerX" secondItem="267883" secondAttribute="centerX"/>
+                                    <constraint id="267923" firstItem="265478" firstAttribute="centerY" secondItem="267883" secondAttribute="centerY"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="267904" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="255" width="288" height="193"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="264921" firstAttribute="leadingMargin" secondItem="264909" secondAttribute="leading" constant="16"/>
+                            <constraint id="264922" firstItem="264909" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="264923" firstItem="264909" firstAttribute="top" secondItem="264879" secondAttribute="top" constant="15"/>
+                            <constraint id="265420" firstItem="264924" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="265421" firstItem="264924" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="265444" firstItem="264925" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="265445" firstItem="264925" firstAttribute="top" secondItem="264924" secondAttribute="bottom" constant="8"/>
+                            <constraint id="265450" firstItem="265427" firstAttribute="leading" secondItem="264925" secondAttribute="trailing" constant="8"/>
+                            <constraint id="265451" firstItem="265427" firstAttribute="top" secondItem="264924" secondAttribute="bottom" constant="8"/>
+                            <constraint id="265452" firstItem="265427" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="265454" firstItem="265427" firstAttribute="width" secondItem="264925" secondAttribute="width"/>
+                            <constraint id="265470" firstItem="265468" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="265471" firstItem="265468" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="265472" firstItem="264876" firstAttribute="top" secondItem="265468" secondAttribute="bottom" constant="20"/>
+                            <constraint id="266558" firstItem="266557" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="266559" firstItem="266557" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="266560" firstItem="266557" firstAttribute="top" secondItem="264909" secondAttribute="bottom" constant="8"/>
+                            <constraint id="266562" firstItem="264924" firstAttribute="top" secondItem="266557" secondAttribute="bottom" constant="8"/>
+                            <constraint id="267906" firstItem="267904" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="267907" firstItem="267904" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="267908" firstItem="267904" firstAttribute="top" secondItem="264925" secondAttribute="bottom" constant="8"/>
+                            <constraint id="267917" firstItem="267883" firstAttribute="trailing" secondItem="264879" secondAttribute="trailingMargin"/>
+                            <constraint id="267918" firstItem="267883" firstAttribute="leading" secondItem="264879" secondAttribute="leadingMargin"/>
+                            <constraint id="267919" firstItem="265468" firstAttribute="top" secondItem="267883" secondAttribute="bottom" constant="8"/>
+                            <constraint id="267932" firstItem="267883" firstAttribute="top" secondItem="267904" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GeriButton" destination="264910" id="name-outlet-264910"/>
+                        <outlet property="EtkinlikAciklamaText" destination="264924" id="name-outlet-264924"/>
+                        <outlet property="GirisSaatiButton" destination="265416" id="name-outlet-265416"/>
+                        <outlet property="CikisSaatiButton" destination="265431" id="name-outlet-265431"/>
+                        <outlet property="OlusturButton" destination="265468" id="name-outlet-265468"/>
+                        <outlet property="CikisSaatiHazne" destination="265427" id="name-outlet-265427"/>
+                        <outlet property="GirisSaatiHazne" destination="264925" id="name-outlet-264925"/>
+                        <outlet property="EtkinlikAdiText" destination="266557" id="name-outlet-266557"/>
+                        <outlet property="FotografEkleHazne" destination="267883" id="name-outlet-267883"/>
+                        <outlet property="EtkinlikFotoo" destination="267904" id="name-outlet-267904"/>
+                        <outlet property="EtkinlikFotoEkleButton" destination="265480" id="name-outlet-265480"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="264880" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="-331"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Images/cover_vector3.png" width="595" height="235"/>
@@ -1432,5 +1794,8 @@
         <image name="Images/share-2.png" width="48" height="48"/>
         <image name="Images/users.png" width="48" height="48"/>
         <image name="Images/send-2.png" width="48" height="48"/>
+        <image name="Images/users-add.png" width="48" height="48"/>
+        <image name="Images/light-2.png" width="48" height="48"/>
+        <image name="Images/time.png" width="48" height="48"/>
     </resources>
 </document>

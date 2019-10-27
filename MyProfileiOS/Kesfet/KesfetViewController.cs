@@ -620,6 +620,7 @@ namespace MyProfileiOS
                                 if (LastUserLocaiton == null)
                                 {
                                     LastUserLocaiton = mapView.MyLocation.Coordinate;
+                                    UserLastCurrentLocation.LastLoc = LastUserLocaiton;
                                 }
                                 else
                                 {
@@ -633,6 +634,7 @@ namespace MyProfileiOS
                                         }catch{}
                                       
                                         LastUserLocaiton = mapView.MyLocation.Coordinate;
+                                        UserLastCurrentLocation.LastLoc = LastUserLocaiton;
                                         FillDataModel(mapView.MyLocation.Coordinate);
                                         return;
                                     }
@@ -659,7 +661,6 @@ namespace MyProfileiOS
         #endregion
 
         #region DataModels
-
         public class KordinatGonder_RootObject
         {
             public string latitude { get; set; }
@@ -676,8 +677,6 @@ namespace MyProfileiOS
             public int from_user_id { get; set; }
             public int to_user_id { get; set; }
         }
-
-
         public class User
         {
             public int id { get; set; }
@@ -700,7 +699,6 @@ namespace MyProfileiOS
             public string created_at { get; set; }
             public string updated_at { get; set; }
         }
-
         public class NearbyUserCoordinate
         {
             public User user { get; set; }
@@ -714,22 +712,18 @@ namespace MyProfileiOS
             public Marker IlgiliMarker { get; set; }
 
         }
-
         public class Cevredeki_Kiseler_RootObject
         {
             public int status { get; set; }
             public string message { get; set; }
             public List<NearbyUserCoordinate> nearbyUserCoordinates { get; set; }
         }
-
-
         public class OlusturulanMarkerlar
         {
             public Marker marker { get; set; }
             public int markerID { get; set; }
         }
         #endregion
-
 
         #region Custom Class
         public class IdComparer : IEqualityComparer<NearbyUserCoordinate>
@@ -758,5 +752,9 @@ namespace MyProfileiOS
             }
         }
         #endregion
+    }
+    public static class UserLastCurrentLocation
+    {
+        public static CoreLocation.CLLocationCoordinate2D? LastLoc { get; set; }
     }
 }

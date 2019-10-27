@@ -64,6 +64,9 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DT.iOS.DatePickerDialog, Version=1.0.7079.22430, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.iOS.DatePickerDialog.1.0.3\lib\Xamarin.iOS10\DT.iOS.DatePickerDialog.dll</HintPath>
+    </Reference>
     <Reference Include="FFImageLoading, Version=2.4.11.982, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
     </Reference>
@@ -188,6 +191,7 @@
     <InterfaceDefinition Include="Etkinlikler\EtkinlikCustomCardView.xib" />
     <InterfaceDefinition Include="Etkinlikler\EtkinlikDetay\YorumCustomCell.xib" />
     <InterfaceDefinition Include="Etkinlikler\EtkinlikDetay\KatilimciCustomItem.xib" />
+    <InterfaceDefinition Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\BulunanEtkinliklerCustomCell.xib" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <InterfaceDefinition Include="Kesfet\KesfetCustomKisiView.xib" />
@@ -213,6 +217,10 @@
     <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikDetayBaseVC.designer.cs">
       <DependentUpon>EtkinlikDetayBaseVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\BulunanEtkinliklerCustomCell.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\BulunanEtkinliklerCustomCell.designer.cs">
+      <DependentUpon>BulunanEtkinliklerCustomCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Etkinlikler\EtkinlikDetay\KatilimciCustomItem.cs" />
     <Compile Include="Etkinlikler\EtkinlikDetay\KatilimciCustomItem.designer.cs">
       <DependentUpon>KatilimciCustomItem.cs</DependentUpon>
@@ -224,6 +232,10 @@
     <Compile Include="Etkinlikler\KisiBazliListe\EtkinlikKisiBazliListeVC.cs" />
     <Compile Include="Etkinlikler\KisiBazliListe\EtkinlikKisiBazliListeVC.designer.cs">
       <DependentUpon>EtkinlikKisiBazliListeVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\MevcutEtkinlikBaseVC.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\MevcutEtkinlikBaseVC.designer.cs">
+      <DependentUpon>MevcutEtkinlikBaseVC.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil\DeneyimCustomTableCell.cs" />
     <Compile Include="Profil\DeneyimCustomTableCell.designer.cs">
@@ -326,6 +338,10 @@
       <DependentUpon>TakipEttiklerimHorizontalKisiView.cs</DependentUpon>
     </Compile>
     <Compile Include="WebServiceHelper\WebService.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\YeniEtkinlik\YeniEtkinlikOlusturBaseVC.cs" />
+    <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\YeniEtkinlik\YeniEtkinlikOlusturBaseVC.designer.cs">
+      <DependentUpon>YeniEtkinlikOlusturBaseVC.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\ic_launcher.png" />
@@ -1607,6 +1623,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Etkinlikler\EtkinlikOlustur\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
