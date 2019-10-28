@@ -33,6 +33,8 @@ namespace MyProfileiOS.Etkinlikler.EtkinlikDetay.EtkinlikOlustur.MevcutEtkinigeK
         {
             EtkinlikPhoto.Layer.CornerRadius = EtkinlikPhoto.Frame.Height / 2;
             EtkinlikPhoto.ClipsToBounds = true;
+            EtkinlikAdi.Text = "";
+            KatilimciSayisi.Text = "";
             GetEventInfo(GelenEvent.eventt.id.ToString(), EtkinlikAdi, KatilimciSayisi,EtkinlikPhoto);
             
         }

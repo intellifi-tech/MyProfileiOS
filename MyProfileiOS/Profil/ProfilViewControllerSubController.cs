@@ -73,6 +73,15 @@ namespace MyProfileiOS
             GetUserInfo();
             KapakDuzenleButton.TouchUpInside += KapakDuzenleButton_TouchUpInside;
             ProfilFotoDegistirButton.TouchUpInside += ProfilDuzenleButton_TouchUpInside;
+            ProfilDuzenleButton.TouchUpInside += ProfilDuzenleButton_TouchUpInside1;
+        }
+
+        private void ProfilDuzenleButton_TouchUpInside1(object sender, EventArgs e)
+        {
+            var UIStoryboard1 = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            ProfilBilgiGuncelle controller = UIStoryboard1.InstantiateViewController("ProfilBilgiGuncelle") as ProfilBilgiGuncelle;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            this.PresentViewController(controller, true, null);
         }
 
         private void ProfilDuzenleButton_TouchUpInside(object sender, EventArgs e)
@@ -266,7 +275,6 @@ namespace MyProfileiOS
             }
         }
         #endregion
-
         void GetUserInfo()
         {
             new System.Threading.Thread(new System.Threading.ThreadStart(delegate

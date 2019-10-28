@@ -64,9 +64,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DT.iOS.DatePickerDialog, Version=1.0.7079.22430, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.iOS.DatePickerDialog.1.0.3\lib\Xamarin.iOS10\DT.iOS.DatePickerDialog.dll</HintPath>
-    </Reference>
     <Reference Include="FFImageLoading, Version=2.4.11.982, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
     </Reference>
@@ -237,6 +234,19 @@
     <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\MevcutEtkinlikBaseVC.designer.cs">
       <DependentUpon>MevcutEtkinlikBaseVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericClass\DatePickerDialog.cs" />
+    <Compile Include="Profil\ProfilDuzenle\KariyerEkleVC.cs" />
+    <Compile Include="Profil\ProfilDuzenle\KariyerEkleVC.designer.cs">
+      <DependentUpon>KariyerEkleVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\ProfilDuzenle\ProfilBilgiGuncelle.cs" />
+    <Compile Include="Profil\ProfilDuzenle\ProfilBilgiGuncelle.designer.cs">
+      <DependentUpon>ProfilBilgiGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\ProfilDuzenle\ProfilBilgiGuncelleSubVC.cs" />
+    <Compile Include="Profil\ProfilDuzenle\ProfilBilgiGuncelleSubVC.designer.cs">
+      <DependentUpon>ProfilBilgiGuncelleSubVC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil\DeneyimCustomTableCell.cs" />
     <Compile Include="Profil\DeneyimCustomTableCell.designer.cs">
       <DependentUpon>DeneyimCustomTableCell.cs</DependentUpon>
@@ -336,6 +346,10 @@
     <Compile Include="Etkinlikler\TakipEttiklerimHorizontalKisiView.cs" />
     <Compile Include="Etkinlikler\TakipEttiklerimHorizontalKisiView.designer.cs">
       <DependentUpon>TakipEttiklerimHorizontalKisiView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\ProfilDuzenle\SektorSecVC.cs" />
+    <Compile Include="Profil\ProfilDuzenle\SektorSecVC.designer.cs">
+      <DependentUpon>SektorSecVC.cs</DependentUpon>
     </Compile>
     <Compile Include="WebServiceHelper\WebService.cs" />
     <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\YeniEtkinlik\YeniEtkinlikOlusturBaseVC.cs" />
@@ -1624,9 +1638,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Images\tower.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Etkinlikler\EtkinlikOlustur\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

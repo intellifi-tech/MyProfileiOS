@@ -130,7 +130,7 @@ namespace MyProfileiOS
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
             {
                 tableView.DeselectRow(indexPath, true);
-                tableView.DeselectRow(indexPath, true);
+                
                 //tableView.BeginUpdates();
                 //tableView.ReloadRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
                 //tableView.EndUpdates();

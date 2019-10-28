@@ -1,3 +1,4 @@
+using DT.iOS.DatePickerDialog;
 using FFImageLoading;
 using Foundation;
 using MyProfileiOS.DataBasee;
@@ -43,6 +44,9 @@ namespace MyProfileiOS
             PgerHazneee.AddSubview(viewController.View);
             this.AddChildViewController(viewController);
             viewController.DidMoveToParentViewController(this);
+            YeniEtkinlikOlusturButton.TouchUpInside += YeniEtkinlikOlusturButton_TouchUpInside;
+            YeniEtkinlikSubButton.TouchUpInside += YeniEtkinlikSubButton_TouchUpInside;
+            EtkinligeKatilSubButton.TouchUpInside += EtkinligeKatilSubButton_TouchUpInside;
         }
         public override void ViewDidAppear(bool animated)
         {
@@ -52,9 +56,7 @@ namespace MyProfileiOS
             YeniEtkinlikOlusturButton.Layer.CornerRadius = YeniEtkinlikOlusturButton.Frame.Height / 2;
             YeniEtkinlikOlusturButton.ClipsToBounds = true;
             ButtonTasarimlariniAyarla(YeniEtkinlikOlusturButton);
-            YeniEtkinlikOlusturButton.TouchUpInside += YeniEtkinlikOlusturButton_TouchUpInside;
-            YeniEtkinlikSubButton.TouchUpInside += YeniEtkinlikSubButton_TouchUpInside;
-            EtkinligeKatilSubButton.TouchUpInside += EtkinligeKatilSubButton_TouchUpInside;
+          
         }
 
         private void EtkinligeKatilSubButton_TouchUpInside(object sender, EventArgs e)
@@ -71,6 +73,7 @@ namespace MyProfileiOS
         {
             HideSubButtons();
             HoverView.Hidden = true;
+            SecilenEtkinlik.EtkinlikID = null;
             var UIStoryboard1 = UIStoryboard.FromName("Main", NSBundle.MainBundle);
             YeniEtkinlikOlusturBaseVC controller = UIStoryboard1.InstantiateViewController("YeniEtkinlikOlusturBaseVC") as YeniEtkinlikOlusturBaseVC;
             controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
@@ -90,17 +93,22 @@ namespace MyProfileiOS
                 HoverView.Hidden = true;
             }
         }
+        bool Actinmi = false;
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
             HideSubButtons();
             ArkaHoverOlustur();
-            EtkinligeKatilSubButton.ContentEdgeInsets = new UIEdgeInsets(4,4,4,4);
+            EtkinligeKatilSubButton.ContentEdgeInsets = new UIEdgeInsets(4, 4, 4, 4);
             SetRounded(YeniEtkinlikSubButton);
             SetRounded(YeniEtkinlikSubLabel);
             SetRounded(EtkinligeKatilSubButton);
             SetRounded(EtkinligeKatilSubLabel);
             SetUserPhoto();
+            if (!Actinmi)
+            {
+                Actinmi = true;
+            }
         }
         void SetRounded(UIView GelenView)
         {

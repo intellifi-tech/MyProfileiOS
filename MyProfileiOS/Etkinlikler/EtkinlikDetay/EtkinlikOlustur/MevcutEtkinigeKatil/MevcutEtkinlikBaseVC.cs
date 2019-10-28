@@ -52,7 +52,7 @@ namespace MyProfileiOS
                 if (Donus != "Hata")
                 {
                     var durumm = Donus.ToString();
-                    var GelenEtkinler = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject_Events>(Donus);
+                    var GelenEtkinler = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject_Events>(Donus.ToString().Replace(",0",""));
                     if (GelenEtkinler.status == 200)
                     {
                         EtkinlikListtt = GelenEtkinler.nearbyEvent;
@@ -84,10 +84,23 @@ namespace MyProfileiOS
                 {
                     Console.WriteLine(loc.Coordinate.Latitude);
                     UserLastCurrentLocation.LastLoc = loc.Coordinate;
-                    GetEventList();
+                    if (UserLastCurrentLocation.LastLoc != null)
+                    {
+                        GetEventList();
+                    }
                 }
             };
         }
+
+        public void RowClickk(NearbyEvent GelenEvent)
+        {
+            SecilenEtkinlik.EtkinlikID = GelenEvent.eventt.id;
+            var UIStoryboard1 = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            YeniEtkinlikOlusturBaseVC controller = UIStoryboard1.InstantiateViewController("YeniEtkinlikOlusturBaseVC") as YeniEtkinlikOlusturBaseVC;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            this.PresentViewController(controller, true, null);
+        }
+
 
         #region DataModels
 
@@ -166,7 +179,7 @@ namespace MyProfileiOS
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
             {
                 tableView.DeselectRow(indexPath, true);
-                //AnaMainListCustomView1.RowSelectt(TableItems[indexPath.Row]);
+                AnaMainListCustomView1.RowClickk(TableItems[indexPath.Row]);
             }
         }
 
