@@ -34,13 +34,29 @@ namespace MyProfileiOS
             normalKisit = this.BottomKisitlama.Constant;
             GonderButton.TouchUpInside += GonderButton_TouchUpInside;
             GeriButton.TouchUpInside += GeriButton_TouchUpInside;
+            PorfileGitButton.TouchUpInside += PorfileGitButton_TouchUpInside;
+        }
+
+        private void PorfileGitButton_TouchUpInside(object sender, EventArgs e)
+        {
+            if (SecilenKullanici.UserID == ChatUserId.UserID)
+            {
+                this.DismissViewController(true, null);
+            }
+            else
+            {
+                SecilenKullanici.UserID = ChatUserId.UserID;
+                var LokasyonKisilerStory = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+                ProfilViewKontroller controller = LokasyonKisilerStory.InstantiateViewController("ProfilViewKontroller") as ProfilViewKontroller;
+                controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+                this.PresentViewController(controller, true, null);
+            }
         }
 
         private void GeriButton_TouchUpInside(object sender, EventArgs e)
         {
             this.DismissViewController(true,null);
         }
-
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
@@ -52,7 +68,6 @@ namespace MyProfileiOS
             MesajInput.ClipsToBounds = true;
             MesajTablo.SeparatorStyle = UITableViewCellSeparatorStyle.None;
         }
-
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
@@ -149,6 +164,7 @@ namespace MyProfileiOS
                 UserName.Text = HostModelll.name + " " + HostModelll.surname;
                 UserImage.Layer.CornerRadius = UserImage.Frame.Height / 2;
                 UserImage.ClipsToBounds = true;
+                UserImage.ContentMode = UIViewContentMode.ScaleAspectFill;
                 ImageService.Instance.LoadUrl(HostModelll.profile_photo).Into(UserImage);
                 //HostImagePath = HostModelll.profile_photo;
                 //UserImagePath = DataBase.USER_INFO_GETIR()[0].profile_photo;
@@ -261,7 +277,6 @@ namespace MyProfileiOS
         }
         #endregion
 
-
         #region Mesaj Gonder
         private void GonderButton_TouchUpInside(object sender, EventArgs e)
         {
@@ -372,7 +387,6 @@ namespace MyProfileiOS
             public List<Message> messages { get; set; }
         }
         #endregion
-
 
         #region Table Source
         #region Chat Table Source

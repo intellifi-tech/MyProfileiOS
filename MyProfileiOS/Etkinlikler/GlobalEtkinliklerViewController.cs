@@ -138,7 +138,7 @@ namespace MyProfileiOS
                 {
                     cell = EtkinlikCustomCardView.Create();
                 }
-                cell.UpdateCell(itemss.user_attended_event);
+                cell.UpdateCell(itemss.user_attended_event, AnaMainListCustomView1);
                 return cell;
             }
 

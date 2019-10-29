@@ -1638,7 +1638,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\Images\tower.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\addeventphoto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

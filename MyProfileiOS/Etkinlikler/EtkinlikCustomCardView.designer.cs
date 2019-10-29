@@ -47,6 +47,10 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton KisiProfilineGitButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel UserNameText { get; set; }
 
         [Outlet]
@@ -97,6 +101,11 @@ namespace MyProfileiOS
             if (KatilimciText != null) {
                 KatilimciText.Dispose ();
                 KatilimciText = null;
+            }
+
+            if (KisiProfilineGitButton != null) {
+                KisiProfilineGitButton.Dispose ();
+                KisiProfilineGitButton = null;
             }
 
             if (UserNameText != null) {

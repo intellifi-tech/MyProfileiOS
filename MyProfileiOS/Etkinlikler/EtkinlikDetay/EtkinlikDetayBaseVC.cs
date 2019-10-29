@@ -170,7 +170,7 @@ namespace MyProfileiOS
         {
             var DetayCard = EtkinlikCustomCardView.Create();
             DetayCard.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, 260f);
-            DetayCard.UpdateCell(GelenModel1);
+            DetayCard.UpdateCell(GelenModel1, this);
             var yukseklik = DetayCard.LabelYusekliginiGetir();
             DetayCard.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, yukseklik);
             ScrollVieww.AddSubview(DetayCard);

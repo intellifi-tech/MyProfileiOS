@@ -147,6 +147,13 @@
                         <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="61029" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="2" y="0.0" width="408" height="58"/>
+                        <state key="normal"/>
+                        <constraints>
+                            <constraint id="61033" firstAttribute="height" constant="58"/>
+                        </constraints>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1395" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="8" id="2614"/>
@@ -179,6 +186,9 @@
                     <constraint firstAttribute="trailing" secondItem="59469" secondAttribute="trailing" constant="8" id="59603"/>
                     <constraint firstItem="59469" firstAttribute="top" secondItem="57861" secondAttribute="bottom" constant="8" id="59604"/>
                     <constraint firstAttribute="bottom" secondItem="59469" secondAttribute="bottom" constant="5" id="59605"/>
+                    <constraint id="61030" firstAttribute="trailing" secondItem="61029" secondAttribute="trailing" constant="8"/>
+                    <constraint id="61031" firstItem="61029" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="2"/>
+                    <constraint id="61032" firstItem="61029" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -193,6 +203,7 @@
                 <outlet property="UserTitleText" destination="3837" id="name-outlet-3837"/>
                 <outlet property="UserPhoto" destination="1395" id="name-outlet-1395"/>
                 <outlet property="GirisSaatiText" destination="58861" id="name-outlet-58861"/>
+                <outlet property="KisiProfilineGitButton" destination="61029" id="name-outlet-61029"/>
             </connections>
             <point key="canvasLocation" x="-246" y="-135"/>
         </tableViewCell>

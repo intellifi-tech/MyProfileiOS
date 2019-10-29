@@ -321,7 +321,7 @@ namespace MyProfileiOS
                 {
                     cell = EtkinlikCustomCardView.Create();
                 }
-                cell.UpdateCell(itemss);
+                cell.UpdateCell(itemss, AnaMainListCustomView1);
                 //cell.SelectionStyle = UITableViewCellSelectionStyle.None;
                 return cell;
             }

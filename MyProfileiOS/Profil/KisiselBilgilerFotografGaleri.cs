@@ -309,10 +309,10 @@ namespace MyProfileiOS
                     ImageVieww.Frame = this.ContentView.Bounds;
                     ImageVieww.ContentMode = UIViewContentMode.ScaleAspectFit;
                     ImageVieww.ClipsToBounds = true;
-                    ImageVieww.Image = UIImage.FromBundle("Images/add.png");
+                    ImageVieww.Image = UIImage.FromBundle("Images/addeventphoto.png");
                     ImageVieww.RemoveFromSuperview();
                     this.ContentView.Add(ImageVieww);
-                    ImageVieww.ContentMode = UIViewContentMode.ScaleAspectFill;
+                    ImageVieww.ContentMode = UIViewContentMode.ScaleAspectFit;
                 }
                 else
                 {

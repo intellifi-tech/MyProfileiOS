@@ -56,6 +56,10 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel TakipciLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel UserNameLabel { get; set; }
 
         [Outlet]
@@ -112,6 +116,11 @@ namespace MyProfileiOS
             if (ProfilPhoto != null) {
                 ProfilPhoto.Dispose ();
                 ProfilPhoto = null;
+            }
+
+            if (TakipciLabel != null) {
+                TakipciLabel.Dispose ();
+                TakipciLabel = null;
             }
 
             if (UserNameLabel != null) {

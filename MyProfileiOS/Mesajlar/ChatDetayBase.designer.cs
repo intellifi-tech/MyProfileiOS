@@ -40,6 +40,10 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton PorfileGitButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView UserImage { get; set; }
 
         [Outlet]
@@ -76,6 +80,11 @@ namespace MyProfileiOS
             if (MesajYazHazne != null) {
                 MesajYazHazne.Dispose ();
                 MesajYazHazne = null;
+            }
+
+            if (PorfileGitButton != null) {
+                PorfileGitButton.Dispose ();
+                PorfileGitButton = null;
             }
 
             if (UserImage != null) {

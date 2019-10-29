@@ -14,7 +14,8 @@ namespace MyProfileiOS
     {
         public static readonly NSString Key = new NSString("EtkinlikCustomCardView");
         public static readonly UINib Nib;
-        
+        UIViewController GelenController;
+        UserAttendedEvent GelenModel11;
         static EtkinlikCustomCardView()
         {
             Nib = UINib.FromName("EtkinlikCustomCardView", NSBundle.MainBundle);
@@ -27,7 +28,6 @@ namespace MyProfileiOS
         public static EtkinlikCustomCardView Create()
         {
             var OlusanView = (EtkinlikCustomCardView)Nib.Instantiate(null, null)[0];
-
             return OlusanView;
 
         }
@@ -43,10 +43,22 @@ namespace MyProfileiOS
             IconTint(CikisSaatiIconn);
             UserPhoto.Layer.CornerRadius = UserPhoto.Frame.Height / 2;
             UserPhoto.ClipsToBounds = true;
+            KisiProfilineGitButton.TouchUpInside += KisiProfilineGitButton_TouchUpInside;
         }
 
-        public void UpdateCell(UserAttendedEvent GelenModel1)
+        private void KisiProfilineGitButton_TouchUpInside(object sender, EventArgs e)
         {
+            SecilenKullanici.UserID = GelenModel11.user_id.ToString();
+            var LokasyonKisilerStory = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            ProfilViewKontroller controller = LokasyonKisilerStory.InstantiateViewController("ProfilViewKontroller") as ProfilViewKontroller;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            GelenController.PresentViewController(controller, true, null);
+        }
+
+        public void UpdateCell(UserAttendedEvent GelenModel1, UIViewController GelenController2)
+        {
+            GelenController = GelenController2;
+            GelenModel11 = GelenModel1;
             UserNameText.Text = "";
             UserTitleText.Text = "";
             GirisSaatiText.Text = "";

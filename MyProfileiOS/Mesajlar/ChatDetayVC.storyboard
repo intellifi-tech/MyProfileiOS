@@ -47,6 +47,10 @@
                                             <constraint id="815" firstAttribute="height" constant="21"/>
                                         </constraints>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5485" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="262" y="4" width="50" height="50"/>
+                                        <state key="normal"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint id="800" firstAttribute="height" constant="57"/>
@@ -57,6 +61,10 @@
                                     <constraint id="812" firstItem="802" firstAttribute="top" secondItem="796" secondAttribute="top" constant="4"/>
                                     <constraint id="813" firstItem="802" firstAttribute="leading" secondItem="803" secondAttribute="trailing" constant="8"/>
                                     <constraint id="814" firstItem="803" firstAttribute="top" secondItem="796" secondAttribute="top" constant="18"/>
+                                    <constraint id="5486" firstItem="5485" firstAttribute="trailing" secondItem="802" secondAttribute="trailing"/>
+                                    <constraint id="5487" firstItem="5485" firstAttribute="bottom" secondItem="802" secondAttribute="bottom"/>
+                                    <constraint id="5488" firstItem="5485" firstAttribute="leading" secondItem="802" secondAttribute="leading"/>
+                                    <constraint id="5489" firstItem="5485" firstAttribute="top" secondItem="802" secondAttribute="top"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" id="816" translatesAutoresizingMaskIntoConstraints="NO">
@@ -127,6 +135,7 @@
                         <outlet property="GonderButton" destination="826" id="name-outlet-826"/>
                         <outlet property="MesajTablo" destination="865" id="name-outlet-865"/>
                         <outlet property="BottomKisitlama" destination="1443" id="name-outlet-1443"/>
+                        <outlet property="PorfileGitButton" destination="5485" id="name-outlet-5485"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="794" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -6,6 +6,8 @@ using MyProfileiOS.WebServiceHelper;
 using Newtonsoft.Json;
 using Pager;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UIKit;
 
 namespace MyProfileiOS
@@ -23,6 +25,15 @@ namespace MyProfileiOS
             ProfilPhoto.Layer.BorderColor = UIColor.White.CGColor;
             ProfilPhoto.Layer.BorderWidth = 3f;
             ProfilPhoto.ClipsToBounds = true;
+            KapakPhoto.ClipsToBounds = true;
+            if (SecilenKullanici.UserID != null)
+            {
+                KapakEkleHazne.Hidden = true;
+                ProfilDuzenleHazne.Hidden = true;
+                ProfilDuzenleButton.Hidden = true;
+                ProfilFotoDegistirButton.Hidden = true;
+            }
+            TakiSayisiniGetir();
         }
 
         public override void ViewDidLoad()
@@ -327,8 +338,64 @@ namespace MyProfileiOS
             ProfilFotoDegistirButton.Layer.ShadowOffset = new System.Drawing.SizeF(0f, 2f);
         }
 
-        #region DataModels
-        public class User
+        void TakiSayisiniGetir()
+        {
+            new System.Threading.Thread(new System.Threading.ThreadStart(delegate
+            {
+                WebService webService = new WebService();
+                var Donus = webService.OkuGetir("user/" + SecilenKullanici.UserID + "/myFollowers");
+                if (Donus != null)
+                {
+                    InvokeOnMainThread(delegate () {
+
+                        try
+                        {
+                            var Modell = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TakipcilerimRootView>>(Donus);
+                            TakipciLabel.Text = Modell[0].my_followers.Count().ToString() + " Takipçi";
+                        }
+                        catch
+                        {
+                        }
+
+                    });
+                }
+            })).Start();
+        }
+
+    public class MyFollower
+    {
+        public int id { get; set; }
+        public int type { get; set; }
+        public string profile_photo { get; set; }
+        public string cover_photo { get; set; }
+        public string title { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string career_history { get; set; }
+        public string short_biography { get; set; }
+        public string credentials { get; set; }
+        public string date_of_birth { get; set; }
+        public int company_id { get; set; }
+        public int sector_id { get; set; }
+        public string email { get; set; }
+        public int status { get; set; }
+        public string package { get; set; }
+        public string created_at { get; set; }
+        public string updated_at { get; set; }
+    }
+    public class TakipcilerimRootView
+    {
+        public int id { get; set; }
+        public int from_user_id { get; set; }
+        public int to_user_id { get; set; }
+        public string created_at { get; set; }
+        public string updated_at { get; set; }
+        public List<MyFollower> my_followers { get; set; }
+    }
+
+
+    #region DataModels
+    public class User
         {
             public string id { get; set; }
             public int type { get; set; }
