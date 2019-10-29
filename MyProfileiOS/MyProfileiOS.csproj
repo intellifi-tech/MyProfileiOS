@@ -234,6 +234,10 @@
     <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\MevcutEtkinlikBaseVC.designer.cs">
       <DependentUpon>MevcutEtkinlikBaseVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profil\GaleriBuyutVC.cs" />
+    <Compile Include="Profil\GaleriBuyutVC.designer.cs">
+      <DependentUpon>GaleriBuyutVC.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenericClass\DatePickerDialog.cs" />
     <Compile Include="Profil\ProfilDuzenle\KariyerEkleVC.cs" />
     <Compile Include="Profil\ProfilDuzenle\KariyerEkleVC.designer.cs">
@@ -1640,6 +1644,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\addeventphoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\like_icon_img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

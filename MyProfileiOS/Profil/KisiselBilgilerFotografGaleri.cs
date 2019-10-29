@@ -102,7 +102,7 @@ namespace MyProfileiOS
         }
 
         UIImagePickerController picker;
-        public void ItemClick(UserGallery TiklananFotograf)
+        public void ItemClick(UserGallery TiklananFotograf,UIImage Resim)
         {
             if (TiklananFotograf.AddNewPhoto)
             {
@@ -115,7 +115,12 @@ namespace MyProfileiOS
             }
             else
             {
-
+                var UIStoryboard1 = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+                GaleriBuyutVC controller = UIStoryboard1.InstantiateViewController("GaleriBuyutVC") as GaleriBuyutVC;
+                controller.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+                controller.GelenImage = Resim;
+                controller.GelenGaleriDTO = TiklananFotograf;
+                this.PresentViewController(controller, true, null);
             }
         }
 
@@ -262,7 +267,8 @@ namespace MyProfileiOS
 
             public override void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
             {
-                GelenBase.ItemClick(GelenModel[indexPath.Row]);
+                ShortCell celll = collectionView.CellForItem(indexPath) as ShortCell;
+                GelenBase.ItemClick(GelenModel[indexPath.Row], celll.ImageVieww.Image);
                 
             }
         }
