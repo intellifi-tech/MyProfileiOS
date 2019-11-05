@@ -11,16 +11,20 @@ using UIKit;
 
 namespace MyProfileiOS
 {
-    [Register ("ProfilBilgiGuncelle")]
-    partial class ProfilBilgiGuncelle
+    [Register ("GizlilikAyarlaVC")]
+    partial class GizlilikAyarlaVC
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView DisHanzee { get; set; }
+
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton GeriButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton GizlilikButton { get; set; }
+        UIKit.UISwitch Harita_Toogle { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,18 +32,27 @@ namespace MyProfileiOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIScrollView ScrollVieww { get; set; }
+        UIKit.UISwitch Mesaj_Toggle { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISwitch Takip_Toggle { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (DisHanzee != null) {
+                DisHanzee.Dispose ();
+                DisHanzee = null;
+            }
+
             if (GeriButton != null) {
                 GeriButton.Dispose ();
                 GeriButton = null;
             }
 
-            if (GizlilikButton != null) {
-                GizlilikButton.Dispose ();
-                GizlilikButton = null;
+            if (Harita_Toogle != null) {
+                Harita_Toogle.Dispose ();
+                Harita_Toogle = null;
             }
 
             if (KaydetButton != null) {
@@ -47,9 +60,14 @@ namespace MyProfileiOS
                 KaydetButton = null;
             }
 
-            if (ScrollVieww != null) {
-                ScrollVieww.Dispose ();
-                ScrollVieww = null;
+            if (Mesaj_Toggle != null) {
+                Mesaj_Toggle.Dispose ();
+                Mesaj_Toggle = null;
+            }
+
+            if (Takip_Toggle != null) {
+                Takip_Toggle.Dispose ();
+                Takip_Toggle = null;
             }
         }
     }

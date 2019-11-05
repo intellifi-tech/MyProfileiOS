@@ -16,6 +16,16 @@ namespace MyProfileiOS
             base.ViewDidLoad();
             GeriButton.TouchUpInside += GeriButton_TouchUpInside;
             KaydetButton.TouchUpInside += KaydetButton_TouchUpInside;
+            GizlilikButton.TouchUpInside += GizlilikButton_TouchUpInside;
+        }
+
+        private void GizlilikButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var UIStoryboard1 = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+            GizlilikAyarlaVC controller = UIStoryboard1.InstantiateViewController("GizlilikAyarlaVC") as GizlilikAyarlaVC;
+            controller.ModalPresentationStyle = UIModalPresentationStyle.BlurOverFullScreen;
+            //controller.ProfilBilgiGuncelleSubVC1 = this;
+            this.PresentViewController(controller, true, null);
         }
 
         private void KaydetButton_TouchUpInside(object sender, EventArgs e)

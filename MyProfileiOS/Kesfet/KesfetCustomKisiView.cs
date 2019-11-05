@@ -55,7 +55,18 @@ namespace MyProfileiOS
             }
             else
             {
-                TakipEtButton.SetTitle("Takip Et", UIControlState.Normal);
+                //Takip isteði almak istiyorum
+                if (GelenModel.user.userPrivacy.no_follow_up_request == false)
+                {
+                    TakipEtButton.SetTitle("Takip Et", UIControlState.Normal);
+                }
+                //Takip isteði almak istemiyorum
+                else
+                {
+                    TakipEtButton.Hidden = true;
+                    TakipEtButton.Enabled = false;
+                }
+                
             }
             TakipEtButton.TouchUpInside += TakipEtButton_TouchUpInside;
         }

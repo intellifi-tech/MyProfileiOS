@@ -87,6 +87,10 @@ namespace MyProfileiOS
             
         }
 
+
+       
+
+
         #region Takip
         void TakipEt(int UserId)
         {
@@ -149,12 +153,36 @@ namespace MyProfileiOS
                 }
                 else
                 {
-                    TakipButton.SetImage(UIImage.FromBundle("Images/user-add.png"), UIControlState.Normal);
-                    ButtonTasarimlariniAyarla(TakipButton);
-                    TakipDurumm = false;
+                    UserGizlilik();
+                    if (userPrivacy.no_follow_up_request == false)
+                    {
+                        TakipButton.SetImage(UIImage.FromBundle("Images/user-add.png"), UIControlState.Normal);
+                        ButtonTasarimlariniAyarla(TakipButton);
+                        TakipDurumm = false;
+                    }
+                    else
+                    {
+                        TakipButton.Hidden = true;
+                        TakipDurumm = false;
+                    }
+                    
                 }
             }
         }
+
+
+        UserPrivacy userPrivacy = new UserPrivacy();
+        void UserGizlilik()
+        {
+            WebService webService = new WebService();
+            var Donus = webService.OkuGetir("user/" + SecilenKullanici.UserID.ToString() + "/getUserPrivacySettings");
+            if (Donus != null)
+            {
+                var aaa = Donus.ToString();
+                userPrivacy = Newtonsoft.Json.JsonConvert.DeserializeObject<UserPrivacy>(Donus.ToString());
+            }
+        }
+
         #endregion
 
         public override void ViewDidAppear(bool animated)
@@ -188,9 +216,12 @@ namespace MyProfileiOS
             else
             {
                 TakipDurum();
+                if (userPrivacy.no_message == true)
+                {
+                    MessageButton.Hidden = true;
+                }
                 KullaniciPhoto.Hidden = true;
             }
-            
             SetUserPhoto();
         }
         void SetUserPhoto()
@@ -276,5 +307,16 @@ namespace MyProfileiOS
     public static class SecilenKullanici
     {
         public static string UserID { get; set; }
+    }
+
+    public class UserPrivacy
+    {
+        public int id { get; set; }
+        public int user_id { get; set; }
+        public bool visibility_on_the_map { get; set; }
+        public bool no_message { get; set; }
+        public bool no_follow_up_request { get; set; }
+        public string created_at { get; set; }
+        public string updated_at { get; set; }
     }
 }

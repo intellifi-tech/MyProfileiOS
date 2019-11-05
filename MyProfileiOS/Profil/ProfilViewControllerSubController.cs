@@ -26,12 +26,19 @@ namespace MyProfileiOS
             ProfilPhoto.Layer.BorderWidth = 3f;
             ProfilPhoto.ClipsToBounds = true;
             KapakPhoto.ClipsToBounds = true;
-            if (SecilenKullanici.UserID != null)
+            if (SecilenKullanici.UserID != DataBase.USER_INFO_GETIR()[0].id)
             {
                 KapakEkleHazne.Hidden = true;
                 ProfilDuzenleHazne.Hidden = true;
                 ProfilDuzenleButton.Hidden = true;
                 ProfilFotoDegistirButton.Hidden = true;
+            }
+            else
+            {
+                KapakEkleHazne.Hidden = false;
+                ProfilDuzenleHazne.Hidden = false;
+                ProfilDuzenleButton.Hidden = false;
+                ProfilFotoDegistirButton.Hidden = false;
             }
             TakiSayisiniGetir();
         }

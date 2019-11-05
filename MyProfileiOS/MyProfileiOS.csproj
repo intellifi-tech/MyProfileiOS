@@ -234,6 +234,10 @@
     <Compile Include="Etkinlikler\EtkinlikDetay\EtkinlikOlustur\MevcutEtkinigeKatil\MevcutEtkinlikBaseVC.designer.cs">
       <DependentUpon>MevcutEtkinlikBaseVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profil\ProfilDuzenle\GizlilikAyarlaVC.cs" />
+    <Compile Include="Profil\ProfilDuzenle\GizlilikAyarlaVC.designer.cs">
+      <DependentUpon>GizlilikAyarlaVC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil\GaleriBuyutVC.cs" />
     <Compile Include="Profil\GaleriBuyutVC.designer.cs">
       <DependentUpon>GaleriBuyutVC.cs</DependentUpon>

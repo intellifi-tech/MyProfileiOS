@@ -350,8 +350,6 @@ namespace MyProfileiOS
         {
             new System.Threading.Thread(new System.Threading.ThreadStart(delegate
             {
-               
-
                 WebService webService = new WebService();
                 YakindakiNearbyUserCoordinate_RootObject KordinatGonder_RootObject1 = new YakindakiNearbyUserCoordinate_RootObject()
                 {
@@ -372,6 +370,13 @@ namespace MyProfileiOS
                         {
                            
                             MapDataModel1 = BenHaric;
+
+                            //Gizlilik Ayarlarýný geti
+                            MapDataModel1 = getUsersGizlilik(MapDataModel1);
+
+                            //Mapte Görünmek istemeyenleri Ayýkla
+                            MapDataModel1 = MapDataModel1.FindAll(item => item.user.userPrivacy.visibility_on_the_map == false);
+
                             Console.WriteLine(Donus.ToString());
                             InvokeOnMainThread(delegate()
                             {
@@ -405,6 +410,22 @@ namespace MyProfileiOS
                 }
             })).Start();
         }
+        List<NearbyUserCoordinate> getUsersGizlilik(List<NearbyUserCoordinate> BulunanKullanicilar)
+        {
+            for (int i = 0; i < BulunanKullanicilar.Count; i++)
+            {
+                WebService webService = new WebService();
+                var Donus = webService.OkuGetir("user/" + BulunanKullanicilar[i].user.id.ToString() + "/getUserPrivacySettings");
+                if (Donus != null)
+                {
+                    var aaa = Donus.ToString();
+                    var Ayarlarr = Newtonsoft.Json.JsonConvert.DeserializeObject<UserPrivacy>(Donus.ToString());
+                    BulunanKullanicilar[i].user.userPrivacy = Ayarlarr;
+                }
+            }
+            return BulunanKullanicilar;
+        }
+
         void OzelDurumMarkerlariMaptenKaldir()
         {
             InvokeOnMainThread(delegate () {
@@ -677,6 +698,19 @@ namespace MyProfileiOS
             public int from_user_id { get; set; }
             public int to_user_id { get; set; }
         }
+
+
+        public class UserPrivacy
+        {
+            public int id { get; set; }
+            public int user_id { get; set; }
+            public bool visibility_on_the_map { get; set; }
+            public bool no_message { get; set; }
+            public bool no_follow_up_request { get; set; }
+            public string created_at { get; set; }
+            public string updated_at { get; set; }
+        }
+
         public class User
         {
             public int id { get; set; }
@@ -698,6 +732,7 @@ namespace MyProfileiOS
             public string package { get; set; }
             public string created_at { get; set; }
             public string updated_at { get; set; }
+            public UserPrivacy userPrivacy { get; set; }
         }
         public class NearbyUserCoordinate
         {
